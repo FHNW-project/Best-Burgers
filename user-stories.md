@@ -12,3 +12,4 @@
 10) Customer can choose how to proceed with the payment (card, cash, twint), get a goodbye message and an order number to get an easy pickup procedure.
 ### Extra User-Stories
 1) They should include calories, fat, saturated fats, carbohydrates, of which sugars, protein and salt (maybe a CSV or JSON file).
+2) Customer could save the order into his account (file writing capabilities)
