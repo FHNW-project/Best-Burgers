@@ -1,0 +1,14 @@
+### User-Stories
+1) Customer would like to insert name to get a welcome message and a personalized experience (for example choose if order take away or eat there).
+2) Customer would like to have a list with the available starting options to choose from (preset, personalized burger or go directly to extras).
+3) Customer would love to have different product adapt to different diets (vegetarian, pescatarian, chicken or normal burger).
+4) For custom made burgers, customer would like to choose the ingredients and the quantities (3 different sizes of patty and extras).
+5) Customer would like to know the cost of each ingredient for custom burger, and total updated in real time, when an ingredient is added/ removed?/ quantity changed.
+6) Customer could choose if they want extras or drink to create a Menu set and have a discount on the package. The customer wants to know the price of the menu before selecting if they want a menu or not (price start with small menu example).
+    - Use the price for the small fries as the starting point, from which any other extra cost fries + additional amount.
+7) Customer wants to know the nutritional values of the ingredients and on the final burger, and final order in total. 
+8) Customer could see the total before proceeding with the payment to get an overdue on the full amount with and without VAT
+9) Students would like to have a discount, as they make less money, and the total should reflect that.  
+10) Customer can choose how to proceed with the payment (card, cash, twint), get a goodbye message and an order number to get an easy pickup procedure.
+### Extra User-Stories
+1) They should include calories, fat, saturated fats, carbohydrates, of which sugars, protein and salt (maybe a CSV or JSON file).
