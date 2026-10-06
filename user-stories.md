@@ -17,4 +17,4 @@
 
 ### user stories assignment for each member (first we choose what we like, then we discuss to confirm)
 
-# Filippo: For example I was thinking of taking care of the preset burgers, extra/sides (for both the type of menu) and drink (also for both) programming and ordering part and also dictionaries (that we can check together to see if you like them). I can also take care of the first part like a personalised and welcoming  message,taking away or eating in an option, which type of burger would you like (preset or make your own).
+Filippo: For example I was thinking of taking care of the preset burgers, extra/sides (for both the type of menu) and drink (also for both) programming and ordering part and also dictionaries (that we can check together to see if you like them). I can also take care of the first part like a personalised and welcoming  message,taking away or eating in an option, which type of burger would you like (preset or make your own).
