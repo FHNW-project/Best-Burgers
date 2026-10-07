@@ -30,49 +30,50 @@ We want to build a kiosk machine software where people can customize their desir
 
 ```mermaid
 flowchart TD
-    start["Start"] --> ask_name["Ask customer name"]
-    ask_name --> check_admin["Username = admin?"]
-    check_admin -->|Yes| admin_menu["Admin menu"]
-    admin_menu --> passowrd["admin passowrd"]
-    check_admin -->|No| order_type["Choose order type"]
-    passowrd --> invoices["check invoices"]
-    passowrd --> report["Check weekly report"]
-    invoices --> download["Donwload"]
-    report --> download["Donwload"]
+start["Start"] --> ask_name["Ask customer name"]
+ask_name --> check_admin["Username = admin?"]
+check_admin -->|Yes| admin_menu["Admin menu"]
+admin_menu --> passowrd["admin passowrd"]
+check_admin -->|No| order_type["Choose order type"]
+passowrd --> invoices["check invoices"]
+passowrd --> report["Check weekly report"]
+invoices --> download["Donwload"]
+report --> download["Donwload"]
 
-    order_type --> preset_burger["Preset burger"]
-    order_type --> custom_burger["Custom burger"]
-    order_type --> extras_only["Extras only"]
+order_type --> preset_burger["Preset burger"]
+order_type --> custom_burger["Custom burger"]
+order_type --> extras_only["Extras only"]
 
-    preset_burger --> select_preset["Select preset burger"]
-    select_preset --> ask_menu["Ask if menu"]
-    ask_menu -->|Yes| choose_menu_items["Choose side, drink, size"]
-    ask_menu -->|No| skip_menu["Skip menu"]
+preset_burger --> select_preset["Select preset burger"]
+select_preset --> ask_menu["Ask if menu"]
+ask_menu -->|Yes| choose_menu_items["Choose side, drink, size"]
+ask_menu -->|No| skip_menu["Skip menu"]
 
-    custom_burger --> choose_bun["Choose bun"]
-    choose_bun --> choose_patty_type["Choose patty type"]
-    choose_patty_type --> choose_patty_size["Choose patty size"]
-    choose_patty_size --> choose_vegetables["Choose vegetables"]
-    choose_vegetables --> choose_sauce["Choose sauce"]
-    choose_sauce --> ask_menu
+custom_burger --> choose_bun["Choose bun"]
+choose_bun --> choose_patty_type["Choose patty type"]
+choose_patty_type --> choose_patty_size["Choose patty size"]
+choose_patty_size --> choose_vegetables["Choose vegetables"]
+choose_vegetables --> choose_sauce["Choose sauce"]
+choose_sauce --> ask_menu
 
-    extras_only --> choose_menu_items
+extras_only --> choose_menu_items
 
-    choose_menu_items --> show_summary["Show price and nutrition"]
-    skip_menu --> show_summary
-    show_summary --> continue_order["Continue order"]
-    show_summary --> go_payment["Go to payment"]
-    show_summary --> cancel_order["Cancel order"]
+choose_menu_items --> show_summary["Show price and nutrition"]
+skip_menu --> show_summary
+show_summary --> continue_order["Continue order"]
+show_summary --> go_payment["Go to payment"]
+show_summary --> cancel_order["Cancel order"]
 
-    continue_order --> order_type
-    go_payment --> payment_options["Choose payment options"]
+continue_order --> order_type
+go_payment --> payment_options["Choose payment options"]
 
-    payment_options --> confirm_payment["Confirm payment"]
-    confirm_payment --> generate_order_number["Generate unique order number"]
-    generate_order_number --> save_order["Save order details to file"]
-    save_order --> show_goodbye["Show order number and goodbye"]
-    show_goodbye --> delay["wait 15 seconds"]
-    delay -->|Start new order| ask_name```
+payment_options --> confirm_payment["Confirm payment"]
+confirm_payment --> generate_order_number["Generate unique order number"]
+generate_order_number --> save_order["Save order details to file"]
+save_order --> show_goodbye["Show order number and goodbye"]
+show_goodbye --> delay["wait 15 seconds"]
+delay -->|Start new order| ask_name
+```
 #### Function tree
 
 ```text
