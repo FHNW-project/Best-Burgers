@@ -18,3 +18,6 @@
 ### user stories assignment for each member (first we choose what we like, then we discuss to confirm)
 
 Filippo: For example I was thinking of taking care of the preset burgers, extra/sides (for both the type of menu) and drink (also for both) programming and ordering part and also dictionaries (that we can check together to see if you like them). I can also take care of the first part like a personalised and welcoming  message,taking away or eating in an option, which type of burger would you like (preset or make your own).
+
+
+Andrei P: I am going to create the nutritional calculator, as well as adding the nutritional values (calories, fats, suggars, salt and protein). I will also create the 3 different sizes for patties (Small (150g), medium (300g) and large(540g)).  I am also committed to find a way to display the values in a nicer way, rather than a long list (probable a table form), and format a recip. And lastly, I will create the part the generates a new order number, unique each time, attached to an order after it's fully placed.
