@@ -10,6 +10,28 @@ Customers can choose to pair the burger with a side dish and a drink to create a
 ### problem we try to solve
 We want to build a kiosk machine software where people can customize their desired burger or menu at peace, exactly as the indidual desires. It's important for the clients to know in real time the nutritional values they have on their plate each time, to offer transparency over how the menu is composed, so people can balance as they need.
 
+👤 User Roles
+| Role | Description |
+|------|-------------|
+| **Customer** | Orders burgers and wants to know what they have ordered, how much they need to pay and nutritional values of the order. |
+| **Owner** | Runs the Burger shop, maintains the menu, keeps records of all sales and checks weekly reports. |
+
+🏗️ User stories:
+Andrei Cosmin Parnia:
+1. As a customer, I want to have right data about orice, nutritional values and allergens, so that I can adjust the order.
+2. As an owner, I want to have an admin pannel, so that I can check the orders.
+3. As an owner, I want to have a weekly report with the sales, so I can take data driven decisions on existing and new products.
+
+Filippo Paccagnella
+1. 
+2. 
+3. 
+
+Andrei Oros.
+1. 
+2. 
+3. 
+
 ### Structure
 
 ```mermaid
