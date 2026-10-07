@@ -1,22 +1,22 @@
 # Best burger
-## A project made by Group-H from FHNW
-### 💡 Idea
+### A project made by Group-H from FHNW
+## 💡 Idea
 Our Idea stems from the desire to create the Best Burger to satisfy every type of dietary requirement. 
 
 To do this, we’ve developed this program where customers can choose to build their own burger from scratch or select one of the options we’ve already created.
 
 Customers can choose to pair the burger with a side dish and a drink to create a meal, or purchase just the burger. Once they have made their selection, they will see the nutritional information and price before proceeding to checkout.
 
-### 🤔 problem we try to solve
+## 🤔 problem we try to solve
 We want to build a kiosk machine software where people can customize their desired burger or menu at peace, exactly as the indidual desires. It's important for the clients to know in real time the nutritional values they have on their plate each time, to offer transparency over how the menu is composed, so people can balance as they need.
 
-👤 User Roles
+### 👤 User Roles
 | Role | Description |
 |------|-------------|
 | **Customer** | Orders burgers and wants to know what they have ordered, how much they need to pay and nutritional values of the order. |
 | **Owner** | Runs the Burger shop, maintains the menu, keeps records of all sales and checks weekly reports. |
 
-### 👥 User stories:
+## 👥 User stories:
 #### Andrei Cosmin Parnia:
 1. As a customer, I want to have right data about orice, nutritional values and allergens, so that I can adjust the order.
 2. As an owner, I want to have an admin pannel, so that I can check the orders.
@@ -26,7 +26,7 @@ We want to build a kiosk machine software where people can customize their desir
 
 #### Andrei Oros
 
-### 🚧 Structure
+## 🚧 Structure
 
 ```mermaid
 flowchart TD
@@ -74,7 +74,7 @@ save_order --> show_goodbye["Show order number and goodbye"]
 show_goodbye --> delay["wait 15 seconds"]
 delay -->|Start new order| ask_name
 ```
-#### Function tree
+## Function tree
 
 ```text
 best_burger/
@@ -91,7 +91,7 @@ best_burger/
 └── README.md
 ```
 
-### how it works
+## how it works
 1. The program starts by asking for the customer's name. Then the customer chooses between a preset burger, a custom burger, or extras only.
     1.1. The owner will have a dedicated name that will open the admin side of the program.
     1.2. The owner can access the recipes or weekdly sales reports
