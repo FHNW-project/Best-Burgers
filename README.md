@@ -23,6 +23,9 @@ We want to build a kiosk machine software where people can customize their desir
 3. As an owner, I want to have a weekly report with the sales, so I can take data driven decisions on existing and new products.
 
 #### Filippo Paccagnella
+1. As a customer, I want to be able to customize a burger to satisfy my taste, allergies and dietary requirements.
+2. As a customer, I want to order a Preset burger to have a faster meal and try the chef's ideas.
+3. As a customer, I want the possibility to order extras/sides and drinks to create a menu to get a full meal plan.
 
 #### Andrei Oros
 
