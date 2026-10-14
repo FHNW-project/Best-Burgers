@@ -17,20 +17,15 @@ We want to build a kiosk machine software where people can customize their desir
 | **Owner** | Runs the Burger shop, maintains the menu, keeps records of all sales and checks weekly reports. |
 
 ## 👥 User stories:
-#### Andrei Cosmin Parnia:
 1. As a customer, I want to have right data about price, nutritional values and allergens, so that I can adjust the order.
-2. As an owner, I want to have an admin pannel, so that I can check the orders.
+2. As an owner, I want to have an admin pannel, where I can check the previous orders, get a weekly report for the past weeks
 3. As an owner, I want to have a weekly report with the sales, so I can take data driven decisions on existing and new products.
-
-#### Filippo Paccagnella
-1. As a customer, I want to be able to customize a burger to satisfy my taste, allergies and dietary requirements.
-2. As a customer, I want to order a Preset burger to have a faster meal and try the chef's ideas.
-3. As a customer, I want the possibility to order extras/sides and drinks to create a menu to get a full meal plan.
-
-#### Andrei Oros (calculations, payment options, export file)
-1. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order, and the total with and without VAT before check-out,together with the nutritional values so that I am informed of the costs and be able to control the calories intake.
-2. As a customer, I would be happy to get a 10% discount as a student, and I must be able to choose from different payment options (cash, card, voucher?), so that I can pay with my available funds.
-3. As a customer, I need a printed invoice with the order number so that I can pickup the order.
+4. As a customer, I want to be able to customize a burger to satisfy my taste, allergies and dietary requirements.
+5. As a customer, I want to order a Preset burger to have a faster meal and try the chef's ideas.
+6. As a customer, I want the possibility to order extras/sides and drinks to create a menu to get a full meal plan.
+7. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order, and the total with and without VAT before check-out,together with the nutritional values so that I am informed of the costs and be able to control the calories intake.
+8. As a customer, I would be happy to get a 10% discount as a student, and I must be able to choose from different payment options (cash, card, voucher?), so that I can pay with my available funds.
+9. As a customer, I need a printed invoice with the order number so that I can pickup the order.
 
 ## 🚧 Structure
 
