@@ -7,8 +7,13 @@ To do this, we’ve developed this program where customers can choose to build t
 
 Customers can choose to pair the burger with a side dish and a drink to create a meal, or purchase just the burger. Once they have made their selection, they will see the nutritional information and price before proceeding to checkout.
 
-## 🤔 problem we try to solve
-We want to build a kiosk machine software where people can customize their desired burger or menu at peace, exactly as the indidual desires. It's important for the clients to know in real time the nutritional values they have on their plate each time, to offer transparency over how the menu is composed, so people can balance as they need.
+##📝 Analysis
+
+### 🤔 problem
+People who love burgers (who) experience long queues and waiting times (what) during the ordering process of custom burger at the casheer(where), resulting in frustrated customers/employees and higher percentage risk of mistakes (why).
+
+##💡 Scenario
+Best Burger solves the part of the problem of frustrated customers/employees and high percentage risk of mistakes by letting a user create their own custom burger with a defined list of ingredients and automatically calculate the total and generate the invoice. 
 
 ### 👤 User Roles
 | Role | Description |
@@ -17,15 +22,64 @@ We want to build a kiosk machine software where people can customize their desir
 | **Owner** | Runs the Burger shop, maintains the menu, keeps records of all sales and checks weekly reports. |
 
 ## 👥 User stories:
-1. As a customer, I want to have right data about price, nutritional values and allergens, so that I can adjust the order.
-2. As an owner, I want to have an admin pannel, where I can check the previous orders, get a weekly report for the past weeks
-3. As an owner, I want to have a weekly report with the sales, so I can take data driven decisions on existing and new products.
-4. As a customer, I want to be able to customize a burger to satisfy my taste, allergies and dietary requirements.
-5. As a customer, I want to order a Preset burger to have a faster meal and try the chef's ideas.
-6. As a customer, I want the possibility to order extras/sides and drinks to create a menu to get a full meal plan.
-7. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order, and the total with and without VAT before check-out,together with the nutritional values so that I am informed of the costs and be able to control the calories intake.
-8. As a customer, I would be happy to get a 10% discount as a student, and I must be able to choose from different payment options (cash, card, voucher?), so that I can pay with my available funds.
-9. As a customer, I need a printed invoice with the order number so that I can pickup the order.
+
+#### US-1: Title @Filippo Paccagnella
+1. As a customer, I want to be able to customize a burger to satisfy my taste, allergies and dietary requirements. 
+
+**Acceptance criteria:**
+- TBD
+---
+#### US-2: Title @Filippo Paccagnella
+2. As a customer, I want to order a Preset burger to have a faster meal and try the chef's ideas. 
+
+**Acceptance criteria:**
+- TBD
+---
+#### US-3: Title @Filippo Paccagnella
+3. As a customer, I want the possibility to order extras/sides and drinks to create a menu to get a full meal plan. 
+
+**Acceptance criteria:**
+- TBD
+---
+#### US-4: Group order @Andrei Parnia
+4. As a customer, I want to be able to be able to order for an entire group, so the ordering is fast.
+
+**Acceptence criteria:**
+- TBD
+---
+#### US-5: Title @Andrei Oros
+5. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order, and the total with and without VAT before check-out. 
+
+**Acceptance criteria:**
+- TBD
+---
+#### US-6: Nutritional values and allergens @Andrei Parnia
+6. As a cusotmer, I want to know the  nutritional values and allergens of my selected products.
+
+**Acceptance criteria:**
+- TBD
+---
+#### US-7: Title @Andrei Oros
+7. As a customer, I would be happy to get a 10% discount as a student, and I must be able to choose from different payment options (cash, card, voucher?), so that I can pay with my available funds. 
+
+**Acceptance criteria:**
+- TBD
+---
+#### US-8: Title @Andrei Oros
+8. As a customer, I need a printed invoice with the order number so that I can pickup the order.
+
+**Acceptance criteria:**
+- TBD
+---
+#### US-9: Admin menu @Andrei Parnia
+9. As an owner, I want to have an admin panel, where I can check the previous orders, and get a weekly sales report so I can take data driven decisions on existing and new products.
+
+**Acceptance criteria:**
+- At the greeting screen, when the user is asked for the name, entering `Admin` will open a new menu that is locked behind a passowrd.
+- In the admin menu, the owner of the restaurant can see the past invoices.
+- In the admin menu, the owner can see a weekly report with the exact products that were sold and income generated per week (in `CHF`)
+- In the admin menu, the owner can see the balance of the stock of all items, t know when needs to order more, and which.
+
 
 ## 🚧 Structure
 
