@@ -105,6 +105,7 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 - The invoice file is created, it is named by the date and the order number, so they can be filtered by date and have unique series.
 - The invoice saves the following details: business location, date of the order, client name, order number, items per piece ordered with their respective cost and VAT rate,
   the total nutritional value, alergens contained, subtotal and total cost, payment method, and a good bye message, so that the customer has a clear record of it's purchase.
+- Given the Invoice is ready, when the data is printed on the screen in the console, then the program counts down 20 seconds until it resets to the first step "Hello".
 - After the creation of the invoice file, they should be accesible by the Administrator, so that they can be used for further processes
 ---
 #### US-11: Admin menu @Andrei Parnia
