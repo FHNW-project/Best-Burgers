@@ -60,7 +60,7 @@ Best Burger solves the part of the problem of frustrated customers/employees and
 5. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order.
 
 **Acceptance criteria:**
-- TBD
+- Given the Customer navigates through the ordering process, when they have to make a choice at every step, then the Current Cost (Subtotal incl. VAT) is showed as a footer in the Menu.
 ---
 #### US-6: Nutritional values and allergens @Andrei Parnia
 6. As a customer, I want to know the  nutritional values and allergens of my selected products.
@@ -75,16 +75,21 @@ Best Burger solves the part of the problem of frustrated customers/employees and
 - TBD
 ---
 #### US-8: Discounts for Students @Andrei Oros
-7. As a customer, I expect to be asked if I am a student, and receive a 10% discount before confirming the order and check-out, to profit from my social status.
+7. As a Customer, I also want to apply my student status during the final order review, so that I can receive a discount on my purchase.
 
 **Acceptance criteria:**
-- While the Final Order is shown, 
+- Given the customer is on the Final Order page, when they are asked if they are a Student, then they have to confirm with yes or no.
+- Given the customer answered the question, when they confirm their Student Status, then they asked for the Matriculation Number to validate the eligibility or to bypass the step.
+- Given the customer entered their Matriculation number, when the eligibility is confirmed, then the 10% discount is applied to the Total Cost.
+- Given the discount is confirmed, when the Total Cost is updated, then the Customer can go further to confirm the order, and check-out.
+
 ---
 #### US-9: Payment Methods @Andrei Oros
 7. As a customer, after confirming the order I want to have different payment options (cash or card), so that I can pay with the method of my choice.
 
 **Acceptance criteria:**
-- TBD
+- As a customer, when I check-out, then I can choose betwen paying Cash or Card.
+- 
 ---
 
 #### US-10: Receiving an Invoice @Andrei Oros
