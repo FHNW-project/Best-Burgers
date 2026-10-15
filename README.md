@@ -27,19 +27,28 @@ Best Burger solves the part of the problem of frustrated customers/employees and
 1. As a customer, I want to be able to customize a burger to satisfy my taste, allergies and dietary requirements. 
 
 **Acceptance criteria:**
-- TBD
+- The list of buns (with price and calories) will be displayed when the customer selects option 1 ("Create a Custom Burger") in the main menu.
+- The list of patties (with price and calories) will be displayed after the customer choose the buns.
+- The list of cheese (with price and calories) will be displayed after the customer choose the patties.
+- The list of vegetables (with price and calories) will be displayed after the customer choose the cheese.
+- The list of sauces (with price and calories) will be displayed after the customer choose the vegetables.
+- After the choice of the sauce a recap of all the ingredients will be shown to the customer.
 ---
 #### US-2: Title @Filippo Paccagnella
 2. As a customer, I want to order a Preset burger to have a faster meal and try the chef's ideas. 
 
 **Acceptance criteria:**
-- TBD
+- The list of Preset Burger (with price and calories) will be displayed when the customer selects option 2 ("Choose a preset Burger") in the main menu.
 ---
 #### US-3: Title @Filippo Paccagnella
 3. As a customer, I want the possibility to order extras/sides and drinks to create a menu to get a full meal plan. 
 
 **Acceptance criteria:**
-- TBD
+-  After the choice of Custom or Preset burger the customer need to choose if they want to make a menu or not.
+-  If the Customer choose "yes" the list of available Sides/Extra (with price and calories) will be shown to them.
+-  After they choose they need to say if they want also a drink or not.
+-  If they answer yes the list of available drink (with price and calories) will be shown to them.
+-  After they select their option a recap of the order will be shown to them.
 ---
 #### US-4: Group order @Andrei Parnia
 4. As a customer, I want to be able to be able to order for an entire group, so the ordering is fast.
