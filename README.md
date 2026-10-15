@@ -10,7 +10,7 @@ Customers can choose to pair the burger with a side dish and a drink to create a
 ##📝 Analysis
 
 ### 🤔 problem
-People who love burgers (who) experience long queues and waiting times (what) during the ordering process of custom burger at the casheer(where), resulting in frustrated customers/employees and higher percentage risk of mistakes (why).
+People who love burgers (who) experience long queues and waiting times (what) during the ordering process of custom burger at the casheer (where), resulting in frustrated customers/employees and higher percentage risk of mistakes (why).
 
 ##💡 Scenario
 Best Burger solves the part of the problem of frustrated customers/employees and high percentage risk of mistakes by letting a user create their own custom burger with a defined list of ingredients and automatically calculate the total and generate the invoice. 
@@ -56,31 +56,48 @@ Best Burger solves the part of the problem of frustrated customers/employees and
 **Acceptence criteria:**
 - TBD
 ---
-#### US-5: Title @Andrei Oros
-5. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order, and the total with and without VAT before check-out. 
+#### US-5: Current costs @Andrei Oros
+5. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order.
 
 **Acceptance criteria:**
 - TBD
 ---
 #### US-6: Nutritional values and allergens @Andrei Parnia
-6. As a cusotmer, I want to know the  nutritional values and allergens of my selected products.
+6. As a customer, I want to know the  nutritional values and allergens of my selected products.
 
 **Acceptance criteria:**
 - TBD
 ---
-#### US-7: Title @Andrei Oros
-7. As a customer, I would be happy to get a 10% discount as a student, and I must be able to choose from different payment options (cash, card, voucher?), so that I can pay with my available funds. 
+#### US-7: Costs and Taxes @Andrei Oros
+7. As a customer, I want to see the Final Order, the Total Cost, the Subtotal, the VAT rate, and VAT amount before confirming the Order, to make sure I have ordered everything right.
 
 **Acceptance criteria:**
 - TBD
 ---
-#### US-8: Title @Andrei Oros
-8. As a customer, I need a printed invoice with the order number so that I can pickup the order.
+#### US-8: Discounts for Students @Andrei Oros
+7. As a customer, I expect to be asked if I am a student, and receive a 10% discount before confirming the order and check-out, to profit from my social status.
+
+**Acceptance criteria:**
+- While the Final Order is shown, 
+---
+#### US-9: Payment Methods @Andrei Oros
+7. As a customer, after confirming the order I want to have different payment options (cash or card), so that I can pay with the method of my choice.
 
 **Acceptance criteria:**
 - TBD
 ---
-#### US-9: Admin menu @Andrei Parnia
+
+#### US-10: Receiving an Invoice @Andrei Oros
+8. As a customer, after the payment is succesful I want to receive a printed invoice with the order number and all the details so I can pickup the order, and for tax purposes.
+
+**Acceptance criteria:**
+- After the payment is accepted, the details of the order are written to a new .txt file stored in the orders folder, so that the customer gets a printed copy and the order gets processed.
+- The invoice file is created, it is named by the date and the order number, so they can be filtered by date and have unique series.
+- The invoice saves the following details: business location, date of the order, client name, order number, items per piece ordered with their respective cost and VAT rate,
+  the total nutritional value, alergens contained, subtotal and total cost, payment method, and a good bye message, so that the customer has a clear record of it's purchase.
+- After the creation of the invoice files, they should be accesible by the Administrator, so that they can be used for further processes
+---
+#### US-11: Admin menu @Andrei Parnia
 9. As an owner, I want to have an admin panel, where I can check the previous orders, and get a weekly sales report so I can take data driven decisions on existing and new products.
 
 **Acceptance criteria:**
