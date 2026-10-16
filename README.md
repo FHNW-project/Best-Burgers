@@ -50,14 +50,14 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 -  If they answer yes the list of available drink (with price and calories) will be shown to them.
 -  After they select their option a recap of the order will be shown to them.
 ---
-#### US-4: Group order @Andrei Parnia
-4. As a customer, I want to be able to be able to order for an entire group, so the ordering is fast.
+#### US-4: Customer rating @Andrei Parnia
+4. As a customer, I want to rate my order after receiving the invoice, so that the owner knows how satisfied customers are.
 
 **Acceptence criteria:**
-- Given the customer would like to order for multiple people, when using the kiosk and select group order, then the program will ask for how many people.
-- Given the customer will chose at least 2, when it goes to the menu, then it will loop back to start a new order once the one before finished.
-- Given the customer will chose less than 2, then the program will ask to input a number of at least 2. The number can only be an integer, between 2 and 5.
-- Given the customer will have a group order, when finishing the order, then the group will get 1 invoice per person, at the end.
+- Given the invoice has been created, when it is printed on the screen, then the program asks “Rate your order from 1 to 5 (or press Enter to skip): “.
+- Given the customer is asked for a rating, when they enter an integer between 1 and 5, then the rating is saved with the order number and the date in the file ratings.csv in the data folder.
+- Given the customer is asked for a rating, when they press Enter without typing anything, then no rating is saved and the program continues.
+- Given the rating was saved, when the program continues, then the message “Thank you for your rating!” is displayed.
 ---
 #### US-5: Current costs @Andrei Oros
 5. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order, so that I know when to stop ordering.
@@ -119,6 +119,8 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 - Given the owner has accessed the Admin Pannel when entering the right password, then it will be able to visualize the old orders. If the password is wrong, the program will display the error that the password is wrong, and return to the greeting menu.
 - *Given* the owner needs to understand the sales, *when* accessing the `Admin` menu, *then* can see a weekly report with the total income of the week, total quantity of products sold in a week, and difference in income compared with the previous week.
 - *Given* the owner needs to know the available stock, *when* accessing the `Admin` menu, *then* it can see the available stock of each product it has in the store.
+- Given the owner has accessed the Admin Panel with the right password, when they open the weekly report, then the average rating of the week is shown with one decimal (e.g. “Average rating: 4.3”).
+- Given no ratings exist for the week, when the owner opens the weekly report, then the message “No ratings yet” is displayed instead of the average.
 
 ## 🚧 Structure
 
