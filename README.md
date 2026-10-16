@@ -54,7 +54,10 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 4. As a customer, I want to be able to be able to order for an entire group, so the ordering is fast.
 
 **Acceptence criteria:**
-- TBD
+- Given the customer would like to order for multiple people, when using the kiosk and select group order, then the program will ask for how many people.
+- Given the customer will chose at least 2, when it goes to the menu, then it will loop back to start a new order once the one before finished.
+- Given the customer will chose less than 2, then the program will ask to input a number of at least 2. The number can only be an integer, between 2 and 5.
+- Given the customer will have a group order, when finishing the order, then the group will get 1 invoice per person, at the end.
 ---
 #### US-5: Current costs @Andrei Oros
 5. As a customer, I want to see the current subtotal with VAT included after every decision at every step of the order, so that I know when to stop ordering.
@@ -69,7 +72,7 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 
 **Acceptance criteria:**
 - *Given* different products or elements of a product have different nutritional values, **when** the customer orders a product or builds a burger, nutritional values will be calculated *then* the `calories`, `Fats`, `Sugars`, `Protein` and `Fibers` will be displayed on the screen.
-- *Given* the customer is decided on a product, *when* it goes to payment, it will have displayed the final nutritional values, *then* the customer takes an assumed decision.  
+- *Given* the customer is decided on a product, *when* it goes to payment, it will have displayed the final nutritional values, *then* the customer knows the total nutritional values and allergens (e.g. Allergens: gluten, milk)
 ---
 #### US-7: Costs and Taxes @Andrei Oros
 7. As a customer, I want to see the Final Order, the Total Cost, the Subtotal, the VAT rate, and VAT amount before checking out, to make sure they have ordered everything right.
@@ -112,8 +115,9 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 #### US-11: Admin menu @Andrei Parnia
 9. As an owner, I want to have an admin panel, where I can check the previous orders, and get a weekly sales report so I can take data driven decisions on existing and new products.
 **Acceptance criteria:**
-- *Given* the owner needs to check the previous orders, *when* it access the `Admin` menu by entering the `Administrator` name at the greeting screen, *then* it will be able to access all the previous orders done. 
-- *Given* the owner needs to understand the sales, *when* accessing the `Admin` menu, *then* can see a weekly report with income from sales, quantity of products sold and a comparation with the previous week.
+- *Given* the owner needs to check the previous orders, *when* it access the `Admin` menu by entering the `Administrator` name at the greeting screen, *then* it will be able to access the admin pannel with a password.
+- Given the owner has accessed the Admin Pannel when entering the right password, then it will be able to visualize the old orders. If the password is wrong, the program will display the error that the password is wrong, and return to the greeting menu.
+- *Given* the owner needs to understand the sales, *when* accessing the `Admin` menu, *then* can see a weekly report with the total income of the week, total quantity of products sold in a week, and difference in income compared with the previous week.
 - *Given* the owner needs to know the available stock, *when* accessing the `Admin` menu, *then* it can see the available stock of each product it has in the store.
 
 ## 🚧 Structure
