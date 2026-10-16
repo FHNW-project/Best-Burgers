@@ -57,7 +57,8 @@ Best Burger solves the part of the problem of frustrated customers/employees and
 6. As a cusotmer, I want to know the  nutritional values and allergens of my selected products.
 
 **Acceptance criteria:**
-- TBD
+- *Given* different products or elements of a product have different nutritional values, **when** the customer orders a product or builds a burger, nutritional values will be calculated *then* the `calories`, `Fats`, `Sugars`, `Protein` and `Fibers` will be displayed on the screen.
+- *Given* the customer is decided on a product, *when* it goes to payment, it will have displayed the final nutritional values, *then* the customer takes an assumed decision.  
 ---
 #### US-7: Title @Andrei Oros
 7. As a customer, I would be happy to get a 10% discount as a student, and I must be able to choose from different payment options (cash, card, voucher?), so that I can pay with my available funds. 
@@ -73,13 +74,10 @@ Best Burger solves the part of the problem of frustrated customers/employees and
 ---
 #### US-9: Admin menu @Andrei Parnia
 9. As an owner, I want to have an admin panel, where I can check the previous orders, and get a weekly sales report so I can take data driven decisions on existing and new products.
-
 **Acceptance criteria:**
-- At the greeting screen, when the user is asked for the name, entering `Admin` will open a new menu that is locked behind a passowrd.
-- In the admin menu, the owner of the restaurant can see the past invoices.
-- In the admin menu, the owner can see a weekly report with the exact products that were sold and income generated per week (in `CHF`)
-- In the admin menu, the owner can see the balance of the stock of all items, t know when needs to order more, and which.
-
+- *Given* the owner needs to check the previous orders, *when* it access the `Admin` menu by entering the `Administrator` name at the greeting screen, *then* it will be able to access all the previous orders done. 
+- *Given* the owner needs to understand the sales, *when* accessing the `Admin` menu, *then* can see a weekly report with income from sales, quantity of products sold and a comparation with the previous week.
+- *Given* the owner needs to know the available stock, *when* accessing the `Admin` menu, *then* it can see the available stock of each product it has in the store.
 
 ## 🚧 Structure
 
