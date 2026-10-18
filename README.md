@@ -27,28 +27,33 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 - As a customer, I want to be able to customize a burger to satisfy my taste, allergies and dietary requirements. 
 
 **Acceptance criteria:**
-- The list of buns (with price and calories) will be displayed when the customer selects option 1 ("Create a Custom Burger") in the main menu.
-- The list of patties (with price and calories) will be displayed after the customer choose the buns.
-- The list of cheese (with price and calories) will be displayed after the customer choose the patties.
-- The list of vegetables (with price and calories) will be displayed after the customer choose the cheese.
-- The list of sauces (with price and calories) will be displayed after the customer choose the vegetables.
-- After the choice of the sauce a recap of all the ingredients will be shown to the customer.
+- The list of buns (with price and calories) will be displayed when the customer selects option 1 ("Create a Custom Burger") in the main menu. The customer then need to choose the numbner of the corrisponding Bun (ex: Press 1 for "Sesame Bun")
+- The list of patties (with price and calories) will be displayed after the customer choose the buns, at that point the customer need to write the number of Patty that he wants (Ex: Press 2 for "Wagyu Patty") and how many pieces he wants(Ex: "2 pieces").
+- After the choice of the patty the list of cheese (with price and calories) will be displayed, and the customer need to indicate with one he wants (Ex: "Press 3 for Provolone")and also the quantity (Ex: "2 slices")
+- After the customer the cheese the list of vegetables (with price and calories) will be displayed , the customer will the option to choose more than one vegetables, and also the quantity of portions of them.
+- As the last thing the list of sauces (with price and calories) will be displayed, the customer will have the possibility to choose more than one sauce (Ex "Press 2 for Mayonaise", "Press 3 for Ketchup")
+- After the choice of the sauce a recap of all the ingredients will be shown to the customer with total calories and price.
 ---
 #### US-2: Title @Filippo Paccagnella
 - As a customer, I want to order a Preset burger to have a faster meal and try the chef's ideas. 
 
 **Acceptance criteria:**
 - The list of Preset Burger (with price and calories) will be displayed when the customer selects option 2 ("Choose a preset Burger") in the main menu.
+- The customer will have to press the number of the corresponding Preset Burger (Ex: "Press 2 for Swiss Burger")
+- After the choice of the Preset burger the customer will have the possibility to see a recap with the nutritional value, prices and the product that he choose.
 ---
 #### US-3: Title @Filippo Paccagnella
 - As a customer, I want the possibility to order extras/sides and drinks to create a menu to get a full meal plan. 
 
 **Acceptance criteria:**
--  After the choice of Custom or Preset burger the customer need to choose if they want to make a menu or not.
--  If the Customer choose "yes" the list of available Sides/Extra (with price and calories) will be shown to them.
--  After they choose they need to say if they want also a drink or not.
--  If they answer yes the list of available drink (with price and calories) will be shown to them.
--  After they select their option a recap of the order will be shown to them.
+- After the choice of Custom or Preset burger the customer need to choose if they want to make a menu or not.
+- If the Customer choose "yes" the list of available Sides/Extra (with price and calories) will be shown to them.
+- The customer need to "Press the corresponding number" to indicate which Sides they want and it will be added to their Menu.
+- After they choise of the sides they need to say if they want also a drink or not. 
+- If they answer yes the list of available drink (with price and calories) will be shown to them.
+- The customer need to press the corresponding number to choose a drink and it will be added to their Menu plan.
+- In any case they can also say no to the Menu and just choose only a Sides or a Drink.
+- At the end of the selection for every situation there will be a Recap with all the products that the customer have choose, the price and the nutritional value.
 ---
 #### US-4: Customer rating @Andrei Parnia
 - As a customer, I want to rate my order after receiving the invoice, so that the owner knows how satisfied customers are.
