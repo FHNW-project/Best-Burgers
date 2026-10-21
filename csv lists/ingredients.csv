@@ -1,0 +1,29 @@
+id,category,name,price,calories,fat,sugar,protein,fiber,allergens,quantity
+bun_classic,bun,Classic bun,1.20,250,4.0,5.0,8.0,2.0,gluten,1000
+bun_sesame,bun,Sesame bun,1.40,270,5.5,5.0,8.5,2.2,gluten;sesame,1000
+bun_wholegrain,bun,Wholegrain bun,1.50,240,4.5,3.5,9.0,5.5,gluten,1000
+patty_beef,patty,Beef patty,3.80,330,24.0,0.5,27.0,0.0,none,1000
+patty_beef_premium,patty,Premium beef patty,5.50,350,26.0,0.5,29.0,0.0,none,1000
+patty_chicken,patty,Grilled chicken patty,3.40,230,11.0,0.8,30.0,0.0,none,1000
+patty_fish,patty,Breaded cod patty,3.90,260,13.0,1.0,20.0,1.0,fish;gluten;egg,1000
+patty_veggie,patty,Vegan pea protein patty,3.60,220,12.0,1.5,18.0,5.0,soy,1000
+patty_pork,patty,Pork patty,3.50,310,23.0,0.5,25.0,0.0,none,1000
+cheese_cheddar,cheese,Cheddar slice,0.90,110,9.0,0.1,7.0,0.0,milk,1000
+cheese_emmental,cheese,Emmental slice,1.00,100,7.8,0.1,7.5,0.0,milk,1000
+cheese_vegan,cheese,Vegan cheese slice,1.10,80,6.5,0.2,0.5,0.5,none,1000
+veg_lettuce,vegetable,Lettuce,0.40,5,0.1,0.3,0.4,0.4,none,1000
+veg_tomato,vegetable,Tomato slices,0.50,9,0.1,1.5,0.4,0.5,none,1000
+veg_cucumber,vegetable,Cucumber slices,0.40,7,0.1,1.0,0.3,0.3,none,1000
+veg_pickles,vegetable,Pickles,0.50,6,0.1,1.0,0.3,0.6,none,1000
+veg_onion_raw,vegetable,Raw onion,0.40,12,0.0,2.0,0.4,0.6,none,1000
+veg_onion_caramelized,vegetable,Caramelized onion,0.80,55,3.0,5.5,0.5,0.7,none,1000
+veg_onion_brine,vegetable,Onion in brine,0.50,10,0.0,1.5,0.3,0.5,none,1000
+veg_jalapeno,vegetable,Jalapenos,0.60,8,0.2,0.8,0.3,0.7,none,1000
+veg_rocket,vegetable,Rocket salad,0.60,6,0.1,0.2,0.6,0.4,none,1000
+sauce_ketchup,sauce,Ketchup,0.40,30,0.1,6.5,0.3,0.2,none,1000
+sauce_mayo,sauce,Mayonnaise,0.40,110,12.0,0.5,0.2,0.0,egg,1000
+sauce_mustard,sauce,Mustard,0.40,20,1.0,1.0,1.2,0.6,mustard,1000
+sauce_bbq,sauce,BBQ sauce,0.50,45,0.2,9.0,0.4,0.3,none,1000
+sauce_burger,sauce,Burger sauce,0.50,90,8.5,3.5,0.4,0.2,egg;mustard,1000
+sauce_tartare,sauce,Tartare sauce,0.60,105,11.0,1.2,0.5,0.2,egg;mustard,1000
+sauce_vegan_aioli,sauce,Vegan aioli,0.60,95,10.0,0.8,0.3,0.2,none,1000

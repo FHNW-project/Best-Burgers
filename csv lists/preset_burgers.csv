@@ -1,0 +1,7 @@
+id,name,ingredient_ids,price
+preset_classic_beef,Classic Beef Burger,bun_sesame;patty_beef;cheese_cheddar;veg_lettuce;veg_tomato;veg_pickles;veg_onion_raw;sauce_burger,7.90
+preset_premium_beef,Premium Beef Burger,bun_sesame;patty_beef_premium;cheese_emmental;veg_rocket;veg_tomato;veg_onion_caramelized;sauce_burger,9.50
+preset_chicken,Chicken Burger,bun_classic;patty_chicken;cheese_cheddar;veg_lettuce;veg_tomato;sauce_mayo,6.40
+preset_fish,Fish Burger,bun_classic;patty_fish;veg_lettuce;veg_cucumber;sauce_tartare,6.20
+preset_vegetarian,Vegetarian Burger,bun_wholegrain;patty_veggie;cheese_emmental;veg_lettuce;veg_tomato;veg_onion_raw;sauce_mayo,7.30
+preset_vegan,Vegan Burger,bun_wholegrain;patty_veggie;cheese_vegan;veg_rocket;veg_tomato;veg_onion_brine;sauce_vegan_aioli,7.90

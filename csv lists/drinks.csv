@@ -1,0 +1,12 @@
+id,name,price,calories,fat,sugar,protein,fiber,allergens,quantity
+drink_water_still,Still water 0.5L,2.50,0,0.0,0.0,0.0,0.0,none,1000
+drink_water_sparkling,Sparkling water 0.5L,2.50,0,0.0,0.0,0.0,0.0,none,1000
+drink_cola,Cola 0.5L,3.50,210,0.0,53.0,0.0,0.0,none,1000
+drink_cola_zero,Cola Zero 0.5L,3.50,1,0.0,0.0,0.0,0.0,none,1000
+drink_lemonade,Lemonade 0.5L,3.50,190,0.0,47.0,0.0,0.0,none,1000
+drink_iced_tea,Iced tea 0.5L,3.50,140,0.0,34.0,0.0,0.0,none,1000
+drink_orange_juice,Orange juice 0.3L,4.00,135,0.3,27.0,2.0,0.6,none,1000
+drink_apple_juice,Apple juice 0.3L,4.00,140,0.2,31.0,0.3,0.6,none,1000
+drink_beer,Beer 0.33L,4.50,140,0.0,1.0,1.7,0.0,gluten,1000
+drink_coffee,Coffee,3.00,2,0.0,0.0,0.2,0.0,none,1000
+drink_milkshake_vanilla,Vanilla milkshake 0.4L,5.50,450,14.0,60.0,11.0,0.5,milk,1000
