@@ -1,0 +1,12 @@
+id,name,price,calories,fat,sugar,protein,fiber,allergens,quantity
+side_fries,Fries,3.50,310,15.0,0.4,3.8,3.5,none,1000
+side_sweet_potato_fries,Sweet potato fries,4.20,340,16.0,8.0,3.2,5.5,none,1000
+side_onion_rings,Onion rings,4.50,410,21.0,5.0,5.5,3.0,gluten;milk,1000
+side_chicken_nuggets,Chicken nuggets,5.50,390,22.0,1.0,22.0,1.5,gluten;egg,1000
+side_mozzarella_sticks,Mozzarella sticks,5.20,380,21.0,2.0,16.0,1.2,gluten;milk,1000
+side_coleslaw,Coleslaw,3.20,150,11.0,7.0,1.2,2.0,egg;mustard,1000
+side_salad,Side salad,3.80,60,3.0,3.5,1.8,2.2,none,1000
+dip_ketchup,Ketchup dip,0.80,30,0.1,6.5,0.3,0.2,none,1000
+dip_mayo,Mayonnaise dip,0.80,110,12.0,0.5,0.2,0.0,egg,1000
+dip_bbq,BBQ dip,0.80,45,0.2,9.0,0.4,0.3,none,1000
+dip_garlic,Garlic dip,0.90,100,10.5,0.9,0.4,0.1,egg;milk,1000
