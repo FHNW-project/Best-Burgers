@@ -1,6 +1,9 @@
 import csv
+from pathlib import Path
 
-def load_ingredients(filename="ingredients.csv"):
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+def load_ingredients(filename="csv lists/ingredients.csv"):
     ingredients = []
     with open(filename, newline="", encoding="utf=8") as f:
         for row in csv.DictReader(f):
@@ -47,7 +50,7 @@ def customburger_function():
     #choice if customer desire a patty or not
     patty_choice = input("Would you like to add a patty to your burger? yes/no").strip().lower()
     # if yes print list of the patties
-    while patty_choice == "yes" or "y" or "ye":
+    if patty_choice == "yes" or "y" or "ye":
         for number, item in patties.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
     #choice of the patties
@@ -55,6 +58,15 @@ def customburger_function():
         while choice not in patties:
             print("Invalid choice, please be aware that only digits are accepted.")
             choice = input("Enter the number of the desired Bun:").strip()
+    #adding the selected patty to the ingredient list
+        customburger_ingredients.append(patties[choice]["name"])
+        print("")
+        print("------------")
+    print("")
 
 
 
+#code lines to test the definition
+print("Let's create your Dream's Burger!")
+place_order = customburger_function()
+burger_order = (f'Burger ingredients:{", ".join(place_order)}.')
