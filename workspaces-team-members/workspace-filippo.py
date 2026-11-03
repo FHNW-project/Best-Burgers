@@ -23,3 +23,24 @@ sauces = menu_for("sauce")
 
 #---------
 
+def customburger_function():
+    customburger_ingredients=[]
+
+    #beginning custom order
+    #print buns list and choose 
+    print("Which bun do you want?")
+    for number, item in buns.items():
+        print (f"{number}. {item['name']} - CHF {item['price']:.2f} - {item['calories']} Kcal - Allergens: {item['allergens']}")
+
+    choice = input("Enter the number of your desired Bun: ").strip()
+    while choice not in buns:
+        print("Invalid choice, please be aware that only digits are accepted.")
+        choice = input("Enter the number of your desired Bun: ").strip()
+
+    customburger_ingredients.append(buns[choice]["name"])
+    print("")
+    print("------------")
+    print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+    print("------------")
+    print("")
+
