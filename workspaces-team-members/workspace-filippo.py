@@ -48,9 +48,9 @@ def customburger_function():
     print("")
 
     #choice if customer desire a patty or not
-    patty_choice = input("Would you like to add a patty to your burger? yes/no").strip().lower()
+    patty_choice = input(f"Would you like to add a patty to your burger? yes/no:\n").strip().lower()
     # if yes print list of the patties
-    if patty_choice == "yes" or "y" or "ye":
+    while patty_choice in ("yes" or "y" or "ye"):
         for number, item in patties.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
     #choice of the patties
@@ -63,6 +63,9 @@ def customburger_function():
         print("")
         print("------------")
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+        print("")
+        print("------------")
+        patty_choice = input("Would you like to add another patty to your burger? yes/no").strip().lower()
     print("")
     print("------------")
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
