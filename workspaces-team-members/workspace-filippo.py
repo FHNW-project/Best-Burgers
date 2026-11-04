@@ -54,7 +54,7 @@ def customburger_function():
         for number, item in patties.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
     #choice of the patties
-        choice = input("Enter the number of the desired Bun:").strip()
+        choice = input("Enter the number of the desired Patty:").strip()
         while choice not in patties:
             print("Invalid choice, please be aware that only digits are accepted.")
             choice = input("Enter the number of the desired Bun:").strip()
@@ -62,7 +62,35 @@ def customburger_function():
         customburger_ingredients.append(patties[choice]["name"])
         print("")
         print("------------")
+        print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
     print("")
+    print("------------")
+    print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+    print("------------")
+    print("")
+
+    #choice if customer want cheese or not
+    print("Would you like to add a slice of cheese to your Burger? yes/no")
+    cheese_choice = input("").strip().lower()
+    #print of the list of available cheese
+    if cheese_choice == "yes" or "ye" or "y":
+        for number, item in cheeses.items():
+            print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal -  Allergens: {item["allergens"]}")
+    #choice of the cheese
+        choice = input("Enter the corresponding number of the desired type of Cheese: ").strip()
+        while choice not in cheeses:
+            print ("Invalid choicce, please be aware that only digits are accepted.")
+            choice = input("Enter the corresponding number of the desired type of Cheese: ").strip()
+    #adding the selected cheese to the ingredient list
+        customburger_ingredients.append(cheeses[choice]["name"])
+        print("")
+        print("------------")
+    print("")
+    print("------------")
+    print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+    print("------------")
+    print("")
+
 
 
 
