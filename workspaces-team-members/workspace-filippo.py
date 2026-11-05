@@ -110,7 +110,7 @@ def customburger_function():
     #choice if customer want a vegetables or not
     vegetable_question = input(f"Would you like to add vegetables to your Burger? Yes/No:\n").strip().lower()
     while vegetable_question not in ("yes","ye","y","no","n"):
-        print("Invalid answer, pelase enter only Yes or No, other terms will not be accepted.")
+        print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
         vegetable_question = input(f"Would you like to add vegetables to your Burger? Yes/No:\n").strip().lower()
 
     #print list of available vegetables
@@ -139,6 +139,10 @@ def customburger_function():
 
     #choice if customer want a sauce or not
     sauce_question = input(f"Would you like to add a sauce to your burger? Yes/No:\n").strip().lower()
+    while sauce_question not in ("yes","ye","y","no","n"):
+        print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
+        sauce_question = input(f"Would you like to add a sauce to your burger? Yes/No:\n").strip().lower()
+
     #print list of available sauces
     while sauce_question in ("yes" or "ye" or "y"):
         for number, item in sauces.items():
