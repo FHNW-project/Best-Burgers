@@ -28,10 +28,10 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 
 **Acceptance criteria:**
 - The list of buns (with price and calories) will be displayed when the customer selects option 1 ("Create a Custom Burger") in the main menu. The customer then need to choose the numbner of the corrisponding Bun (ex: Press 1 for "Sesame Bun")
-- The list of patties (with price and calories) will be displayed after the customer choose the buns, at that point the customer need to write the number of Patty that he wants (Ex: Press 2 for "Wagyu Patty") and how many pieces he wants(Ex: "2 pieces").
-- After the choice of the patty the list of cheese (with price and calories) will be displayed, and the customer need to indicate with one he wants (Ex: "Press 3 for Provolone")and also the quantity (Ex: "2 slices")
-- After the customer the cheese the list of vegetables (with price and calories) will be displayed , the customer will the option to choose more than one vegetables, and also the quantity of portions of them.
-- As the last thing the list of sauces (with price and calories) will be displayed, the customer will have the possibility to choose more than one sauce (Ex "Press 2 for Mayonaise", "Press 3 for Ketchup")
+- The list of patties (with price and calories) will be displayed after the customer choose the buns, at that point the customer need to write the number of Patty that he wants (Ex: Press 2 for "Wagyu Patty"). At that point he could choose to add another patty or not.
+- After the choice of the patty the list of cheese (with price and calories) will be displayed, and the customer need to indicate with one he wants (Ex: "Press 3 for Provolone"). After the first choice the customer could add extra cheese also of different type.
+- After the customer the cheese the list of vegetables (with price and calories) will be displayed , and the customer need to indicate with one he wants (Ex: "Press 3 for Tomatoes"). After the first choice the customer could add extra vegetables also of different type.
+- As the last thing the list of sauces (with price and calories) will be displayed, the customer will have the possibility to choose more than one sauce (Ex "Press 2 for Mayonaise").
 - After the choice of the sauce a recap of all the ingredients will be shown to the customer with total calories and price.
 ---
 #### US-2: Title @Filippo Paccagnella
