@@ -125,6 +125,19 @@ def customburger_function():
     print("------------")
     print("")
 
+    #choice if customer want a sauce or not
+    sauce_question = input(f"Would you like to add a sauce to your burger? Yes/No:\n").strip().lower()
+    #print list of available sauces
+    while sauce_question in ("yes" or "ye" or "y"):
+        for number, item in sauces.items():
+            print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
+    #choice of the sauce
+        sauce_choice = input(f"Enter the number of the desired sauce:\n").strip().lower()
+        while sauce_choice not in sauces:
+            print("Invalid choice, please be aware that only digits are accepted.")
+            sauce_choice = input(f"Enter the number of the desired sauce:\n").strip().lower()
+
+
     
 
 
