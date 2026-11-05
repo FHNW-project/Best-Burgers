@@ -136,6 +136,21 @@ def customburger_function():
         while sauce_choice not in sauces:
             print("Invalid choice, please be aware that only digits are accepted.")
             sauce_choice = input(f"Enter the number of the desired sauce:\n").strip().lower()
+        #adding the selected sauce to the ingredient list
+        customburger_ingredients.append(sauces[sauce_choice]["name"])
+        print("")
+        print("------------")
+        print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+        print("------------")
+        print("")
+        sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
+    print("")
+    print("------------")
+    #printing list of ingredients
+    print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+    print("------------")
+    print("")
+
 
 
     
