@@ -99,14 +99,33 @@ def customburger_function():
     print("------------")
     print("")
 
-    #choice if customer want vegetables or not
-    vegetable_question = input(f"Would you like to add vegetables to your Burger? yes/no:\n").strip().lower()
+    #choice if customer want a vegetables or not
+    vegetable_question = input(f"Would you like to add vegetables to your Burger? Yes/No:\n").strip().lower()
     #print list of available vegetables
     while vegetable_question in ("yes" or "ye" or "y"):
         for number, item in vegetables.items():
             print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal -  Allergens: {item["allergens"]}")
+    #choice of the vegetables
+        vegetable_choice = input(f"Enter the number of the desired vegetables:\n").strip().lower()
+        while vegetable_choice not in vegetables:
+            print("Invalid choice, please be aware that only digits are accepted.")
+            vegetable_choice = input(f"Enter the number of the desired vegetables:\n").strip().lower()
+        #adding the selected vegetables to the ingredient list
+        customburger_ingredients.append(vegetables[vegetable_choice]["name"])
+        print("")
+        print("------------")
+        print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+        print("------------")
+        print("")
+        vegetable_question = input(f"Would you like to add another vegetables to your Burger? yes/no:\n").strip().lower()
+    print("")
+    print("------------")
+    #printing list of ingredients
+    print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+    print("------------")
+    print("")
 
-
+    
 
 
 
