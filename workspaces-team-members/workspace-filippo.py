@@ -35,7 +35,7 @@ def customburger_function():
     for number, item in buns.items():
         print (f"{number}. {item['name']} - CHF {item['price']:.2f} - {item['calories']} Kcal - Allergens: {item['allergens']}")
     #choice of the buns
-    bun_choice = input("Enter the number of your desired Bun: ").strip()
+    bun_choice = input(f"Enter the number of your desired Bun:\n").strip()
     while bun_choice not in buns:
         print("Invalid choice, please be aware that only digits are accepted.")
         bun_choice = input("Enter the number of your desired Bun: ").strip()
@@ -49,8 +49,12 @@ def customburger_function():
 
     #choice if customer desire a patty or not
     patty_question = input(f"Would you like to add a patty to your burger? yes/no:\n").strip().lower()
+    while patty_question not in ("yes","ye","y","no","n"):
+        print("Invalice choice, please enter only Yes or No, other terms are not accepted.")
+        patty_question = input(f"Would you like to add a patty to your burger? yes/no:\n").strip().lower()
+
     # if yes print list of the patties
-    while patty_question in ("yes" or "y" or "ye"):
+    while patty_question in ("yes","y","ye"):
         for number, item in patties.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
     #choice of the patties
@@ -150,11 +154,6 @@ def customburger_function():
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
     print("------------")
     print("")
-
-
-
-    
-
 
 
 
