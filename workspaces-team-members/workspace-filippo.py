@@ -167,6 +167,7 @@ def customburger_function():
     print("------------")
     print("")
 
+# convert the presetburger.csv in a dictionary
 def load_preset(filename="csv lists/preset_burgers.csv"):
     presetburger = []
     with open(filename, newline="", encoding="utf=8") as f:
@@ -181,7 +182,21 @@ def preset_menu_for():
     return {str(number): item for number, item in enumerate(presetburger, start=1)}
 
 preset_menu = preset_menu_for()
+#function to order the preset burger
 def presetburger_function():
+    #beggining preset order
+    print("Which Preset Burger do you want?")
+    for number, burger in preset_menu_for.items():
+        print(f"{number}. {burger['name']} - CHF {burger['price']:.2f}")
+
+    presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
+    while presetburger_choice not in preset_menu_for:
+        print("Invalid choice, please be aware that only digits are accepted.")
+        presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
+
+    print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
+    
+
 
 
 #code lines to test the definition
