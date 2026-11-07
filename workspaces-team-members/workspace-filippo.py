@@ -167,7 +167,21 @@ def customburger_function():
     print("------------")
     print("")
 
+def load_preset(filename="csv lists/preset_burgers.csv"):
+    presetburger = []
+    with open(filename, newline="", encoding="utf=8") as f:
+        for row in csv.DictReader(f):
+            row["price"] = float(row["price"])
+            presetburger.append(row)
+    return presetburger
 
+presetburger = load_preset()
+
+def preset_menu_for():
+    return {str(number): item for number, item in enumerate(presetburger, start=1)}
+
+preset_menu = preset_menu_for()
+def presetburger_function():
 
 
 #code lines to test the definition
