@@ -186,14 +186,16 @@ preset_menu = preset_menu_for()
 def presetburger_function():
     #beggining preset order
     print("Which Preset Burger do you want?")
-    for number, burger in preset_menu_for.items():
-        print(f"{number}. {burger['name']} - CHF {burger['price']:.2f}")
-
+    #showing the list of the available Preset
+    for number, burger in preset_menu.items():
+        print(f"{number}. {burger['name']} - CHF {burger['price']:.2f} - Ingredients: {burger['ingredient_ids']}")
+    
+    #customer choose the preset burger
     presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
-    while presetburger_choice not in preset_menu_for:
+    while presetburger_choice not in preset_menu:
         print("Invalid choice, please be aware that only digits are accepted.")
         presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
-
+    #printing the name of the preset burger that the customer choose
     print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
     
 
@@ -201,5 +203,6 @@ def presetburger_function():
 
 #code lines to test the definition
 print("Let's create your Dream's Burger!")
-place_order = customburger_function()
+place_order = presetburger_function()
 burger_order = (f'Burger ingredients:{", ".join(place_order)}.')
+
