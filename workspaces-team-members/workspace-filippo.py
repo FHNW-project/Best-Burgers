@@ -167,6 +167,7 @@ def customburger_function():
     print("------------")
     print("")
 
+#----------------------------
 # convert the presetburger.csv in a dictionary
 def load_preset(filename="csv lists/preset_burgers.csv"):
     presetburger = []
@@ -197,7 +198,20 @@ def presetburger_function():
         presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
     #printing the name of the preset burger that the customer choose
     print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
-    
+#-----------
+# convert the sides.csv in a dictionary
+def load_sides(filename="csv lists/sides.csv"):
+    sides = []
+    with open(filename, newline="", encoding="utf=8") as f:
+        for row in csv.DictReader(f):
+            row["price"] = float(row["price"])
+            row["calories"] = int(row["calories"])
+            sides.append(row)
+    return sides
+
+sides = load_sides()
+
+
 
 
 
