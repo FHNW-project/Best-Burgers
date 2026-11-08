@@ -210,6 +210,11 @@ def load_sides(filename="csv lists/sides.csv"):
     return sides
 
 sides = load_sides()
+#creating the menu for the sides
+def sides_menu_for():
+    return{str(number): item for number, item in enumerate(sides, start =1)}
+sides_menu = sides_menu_for()
+
 
 
 
