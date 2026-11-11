@@ -1,8 +1,11 @@
+# USER STORIES 1 - 2 - 3
+
 import csv
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#load ingredients from Csv file
 def load_ingredients(filename="csv lists/ingredients.csv"):
     ingredients = []
     with open(filename, newline="", encoding="utf=8") as f:
@@ -12,12 +15,16 @@ def load_ingredients(filename="csv lists/ingredients.csv"):
             ingredients.append(row)
     return ingredients
 
+#connecting the ingredient by the id to the ingredient name
 ingredients = load_ingredients()
+ingredients_by_id = {i["id"]: i for i in ingredients}
 
+#splitting the ingredients by category
 def menu_for(category):
     items = [i for i in ingredients if i["category"] == category]
     return {str(number): item for number, item in enumerate(items, start=1)}
 
+#associating the list of the ingredients to the respective name
 buns = menu_for("bun")
 patties = menu_for("patty")
 cheeses = menu_for("cheese")
@@ -70,6 +77,10 @@ def customburger_function():
         print("")
         print("------------")
         patty_question = input(f"Would you like to add another patty to your burger? yes/no:\n").strip().lower()
+        while patty_question not in ("yes","ye","y","no","n"):
+            print("Invalice answer, please enter only Yes or No, other terms will not be accepted.")
+            patty_question = input(f"Would you like to add another patty to your burger? yes/no:\n").strip().lower()
+        
     print("")
     print("------------")
     #printing list of ingredients
@@ -174,6 +185,7 @@ def load_preset(filename="csv lists/preset_burgers.csv"):
     with open(filename, newline="", encoding="utf=8") as f:
         for row in csv.DictReader(f):
             row["price"] = float(row["price"])
+            row["ingredient_ids"] = row["ingredient_ids"].split(";")
             presetburger.append(row)
     return presetburger
 
@@ -182,6 +194,15 @@ presetburger = load_preset()
 def preset_menu_for():
     return {str(number): item for number, item in enumerate(presetburger, start=1)}
 
+#definition to get the allergens information from the ingredients.csv and check if they are double or they don't have it
+def presetburger_allergens(ids):
+    found = set()
+    for i in ids:
+        for allergen in ingredients_by_id[i]["allergens"].split(";"):
+            if allergen != "none":
+                found.add(allergen)
+    return sorted(found)
+
 preset_menu = preset_menu_for()
 #function to order the preset burger
 def presetburger_function():
@@ -189,7 +210,12 @@ def presetburger_function():
     print("Which Preset Burger do you want?")
     #showing the list of the available Preset
     for number, burger in preset_menu.items():
-        print(f"{number}. {burger['name']} - CHF {burger['price']:.2f} - Ingredients: {burger['ingredient_ids']}")
+        ids = burger["ingredient_ids"]
+        names = ", ".join(ingredients_by_id[i]["name"] for i in ids)
+        allergens = ", ".join(presetburger_allergens(ids)) or "none"
+        print(f"{number}. {burger['name']} - CHF {burger['price']:.2f}")
+        print(f" Ingredients: {names}")
+        print(f" Allergens: {allergens}")
     
     #customer choose the preset burger
     presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
@@ -221,7 +247,20 @@ sides_menu = sides_menu_for()
 
 
 #code lines to test the definition
-print("Let's create your Dream's Burger!")
-place_order = presetburger_function()
-burger_order = (f'Burger ingredients:{", ".join(place_order)}.')
+order_info = []
+place_order = input ("Enter the number:")
+ #Create your own burger
+if place_order == "1":
+        print("Let's create your Dream's Burger!")
+        place_order = customburger_function()
+        burger_order = (f'Burger ingredients:{", ".join(place_order)}.')
+        order_info.append(burger_order)
 
+    # Choose a preset burger
+elif place_order == "2":
+        place_order = presetburger_function()
+        menu_question = input("Would you like to make a menu?")  
+                 
+else:
+                    print("Only to Test the if")
+                    
