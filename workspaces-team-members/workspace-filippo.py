@@ -111,6 +111,9 @@ def customburger_function():
         print("------------")
         print("")
         cheese_question = input(f"Would you like to add another slice of cheese to your Burger? yes/no:\n").strip().lower()
+        while cheese_question not in ("yes","ye","y","no","n"):
+            print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
+            cheese_question = input(f"Would you like to add another slice of cheese to your Burger? yes/no:\n").strip().lower()
     print("")
     print("------------")
     #printing list of ingredients
