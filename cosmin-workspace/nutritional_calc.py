@@ -1,5 +1,7 @@
 import csv
 
+# US-6: Nutritional values and allergens @Andrei Parnia
+
 nutritional_values = {}
 
 with open ("data/ingredients.csv", mode="r", encoding="utf-8") as ingredient_file:
