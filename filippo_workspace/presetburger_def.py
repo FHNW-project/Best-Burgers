@@ -11,6 +11,19 @@ sys.path.append(str(BASE_DIR))
 
 from cosmin_workspace.nutritional_calc import nutritional_calculator
 
+#load ingredients from Csv file
+def load_ingredients(filename="csv lists/ingredients.csv"):
+    ingredients = []
+    with open(filename, newline="", encoding="utf=8") as f:
+        for row in csv.DictReader(f):
+            row["price"] = float(row["price"])
+            row["calories"]=int(row["calories"])
+            ingredients.append(row)
+    return ingredients
+
+#connecting the ingredient by the id to the ingredient name
+ingredients = load_ingredients()
+ingredients_by_id = {i["id"]: i for i in ingredients}
 
 # convert the presetburger.csv in a dictionary
 def load_preset(filename="csv lists/preset_burgers.csv"):
