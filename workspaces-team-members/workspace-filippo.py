@@ -1,7 +1,9 @@
 # USER STORIES 1 - 2 - 3
-
+import 
 import csv
 from pathlib import Path
+
+LINE = "="*50
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -49,9 +51,9 @@ def customburger_function():
     #adding the selected bun to the ingredient list
     customburger_ingredients.append(buns[bun_choice]["name"])
     print("")
-    print("------------")
+    print(LINE)
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-    print("------------")
+    print(LINE)
     print("")
 
     #choice if customer desire a patty or not
@@ -72,20 +74,20 @@ def customburger_function():
     #adding the selected patty to the ingredient list
         customburger_ingredients.append(patties[patty_choice]["name"])
         print("")
-        print("------------")
+        print(LINE)
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+        print(LINE)
         print("")
-        print("------------")
         patty_question = input(f"Would you like to add another patty to your burger? yes/no:\n").strip().lower()
         while patty_question not in ("yes","ye","y","no","n"):
             print("Invalice answer, please enter only Yes or No, other terms will not be accepted.")
             patty_question = input(f"Would you like to add another patty to your burger? yes/no:\n").strip().lower()
         
     print("")
-    print("------------")
+    print(LINE)
     #printing list of ingredients
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-    print("------------")
+    print(LINE)
     print("")
 
     #choice if customer want cheese or not
@@ -106,19 +108,19 @@ def customburger_function():
     #adding the selected cheese to the ingredient list
         customburger_ingredients.append(cheeses[cheese_choice]["name"])
         print("")
-        print("------------")
+        print(LINE)
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-        print("------------")
+        print(LINE)
         print("")
         cheese_question = input(f"Would you like to add another slice of cheese to your Burger? yes/no:\n").strip().lower()
         while cheese_question not in ("yes","ye","y","no","n"):
             print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
             cheese_question = input(f"Would you like to add another slice of cheese to your Burger? yes/no:\n").strip().lower()
     print("")
-    print("------------")
+    print(LINE)
     #printing list of ingredients
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-    print("------------")
+    print(LINE)
     print("")
 
     #choice if customer want a vegetables or not
@@ -143,12 +145,15 @@ def customburger_function():
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
         print("------------")
         print("")
-        vegetable_question = input(f"Would you like to add another vegetables to your Burger? yes/no:\n").strip().lower()
+        vegetable_question = input(f"Would you like to add another vegetable to your Burger? yes/no:\n").strip().lower()
+        while vegetable_question not in ("yes","ye","y","no","n"):
+            print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
+            vegetable_question = input(f"Would you like to add another vegetable to your Burger? Yes/No:\n").strip().lower()
     print("")
-    print("------------")
+    print(LINE)
     #printing list of ingredients
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-    print("------------")
+    print(LINE)
     print("")
 
     #choice if customer want a sauce or not
@@ -169,17 +174,26 @@ def customburger_function():
         #adding the selected sauce to the ingredient list
         customburger_ingredients.append(sauces[sauce_choice]["name"])
         print("")
-        print("------------")
+        print(LINE)
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-        print("------------")
+        print(LINE)
         print("")
         sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
+        while sauce_question not in ("yes","ye","y","no","n"):
+            print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
+            sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
     print("")
-    print("------------")
+    print(LINE)
     #printing list of ingredients
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-    print("------------")
+    print(LINE)
     print("")
+#---------------------------
+# End of the definition for custom made burger
+
+
+
+
 
 #----------------------------
 # convert the presetburger.csv in a dictionary
