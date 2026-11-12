@@ -230,7 +230,6 @@ preset_menu = preset_menu_for()
 #function to order the preset burger
 def presetburger_function():
     #beggining preset order
-    presetcalories = []
     print("Which Preset Burger do you want?")
     #showing the list of the available Preset
     for number, burger in preset_menu.items():
@@ -271,11 +270,15 @@ def sides_menu_for():
     return{str(number): item for number, item in enumerate(sides, start =1)}
 sides_menu = sides_menu_for()
 
+def side_function():
+    #beginning side order
+    print("Which of the following Sides do you want?")
+    #printing the list of the available Sides
+    for number, item in sides_menu.items():
+        print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
 
-
-
-
-
+    #choise of the desired Side
+    side_choice = input("")
 #code lines to test the definition
 order_info = []
 place_order = input ("Enter the number:")
