@@ -1,6 +1,6 @@
 # USER STORIES 1 - 2 - 3
 
-
+import sys
 import csv
 from pathlib import Path
 
@@ -9,6 +9,10 @@ burgercomplete = "Perfect, you have finished your Dream's Burger. This are the i
 LINE = "="*50
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.append(str(BASE_DIR))
+
+from cosmin_workspace.nutritional_calc import nutritional_calculator
+
 
 #load ingredients from Csv file
 def load_ingredients(filename="csv lists/ingredients.csv"):
@@ -40,6 +44,7 @@ sauces = menu_for("sauce")
 
 def customburger_function():
     customburger_ingredients=[]
+    itemcalories = []
 
     #beginning custom order
     #print buns list 
@@ -56,6 +61,8 @@ def customburger_function():
     print("")
     print(LINE)
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
+    itemcolaries = cosmin_workspace.nutritional_calc.nutritional_calculator()
+
     print(LINE)
     print("")
 
@@ -224,6 +231,7 @@ preset_menu = preset_menu_for()
 #function to order the preset burger
 def presetburger_function():
     #beggining preset order
+    presetcalories = []
     print("Which Preset Burger do you want?")
     #showing the list of the available Preset
     for number, burger in preset_menu.items():
@@ -239,6 +247,9 @@ def presetburger_function():
     while presetburger_choice not in preset_menu:
         print("Invalid choice, please be aware that only digits are accepted.")
         presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
+    presetcalories = nutritional_calculator(burger["ingredient_ids"])
+    print(f"{presetcalories['calories']:.0f} Kcal - Fat: {presetcalories['fat']:.1f}")
+    print(presetcalories)
     #printing the name of the preset burger that the customer choose
     print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
 #-----------
