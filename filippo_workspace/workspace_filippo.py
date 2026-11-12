@@ -44,7 +44,7 @@ sauces = menu_for("sauce")
 
 def customburger_function():
     customburger_ingredients=[]
-    itemcalories = []
+    
 
     #beginning custom order
     #print buns list 
@@ -61,7 +61,6 @@ def customburger_function():
     print("")
     print(LINE)
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-    itemcolaries = cosmin_workspace.nutritional_calc.nutritional_calculator()
 
     print(LINE)
     print("")
@@ -247,11 +246,14 @@ def presetburger_function():
     while presetburger_choice not in preset_menu:
         print("Invalid choice, please be aware that only digits are accepted.")
         presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
-    presetcalories = nutritional_calculator(burger["ingredient_ids"])
-    print(f"{presetcalories['calories']:.0f} Kcal - Fat: {presetcalories['fat']:.1f}")
-    print(presetcalories)
-    #printing the name of the preset burger that the customer choose
+    chosen = preset_menu[presetburger_choice]
+    chosencalories = nutritional_calculator(chosen["ingredient_ids"])
+
     print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
+    print(f"{chosencalories['calories']:.0f} Kcal - Fat: {chosencalories['fat']:.1f} - Sugar: {chosencalories['sugar']:.1f} - Protein: {chosencalories['protein']:.1f} - Fiber {chosencalories['fiber']:.1f}")
+    
+    #printing the name of the preset burger that the customer choose
+    
 #-----------
 # convert the sides.csv in a dictionary
 def load_sides(filename="csv lists/sides.csv"):
