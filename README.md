@@ -97,16 +97,8 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 - Given the customer is not interested in the Student Discount, when they are facing the Final Order page, they can ignore "Cancel your Order", "Student Discount" and select "Continue to Payment".
 
 ---
-#### US-9: Payment Methods @Andrei Oros
-- As a Customer, after confirming the Order I want to have different payment options (cash or card), so that I can pay with the method of my choice.
 
-**Acceptance criteria:**
-- Given the customer continues to payment, when they check-out, then they can choose betwen paying Cash or Card.
-- Given the customer doesn't have cash, when they select Card, then they have to type in their Card Details and CVV code. (card payment simulation)
-- Given the customer wants to pay cash, when they select Cash, then they receive the Invoice with the Order number and they can use it to pay when they pick-up their Order.
----
-
-#### US-10: Receiving an Invoice @Andrei Oros
+#### US-9: Receiving an Invoice @Andrei Oros
 - As a customer, after the payment is succesful I want to receive a printed invoice with the order number and all the details so I can pickup the order, and for tax purposes.
 
 **Acceptance criteria:**
@@ -117,7 +109,7 @@ Best Burger solves the problem of frustrated customers and employees in a Take-A
 - Given the Invoice is ready, when the data is printed on the screen in the console, then the program counts down 20 seconds until it resets to the first step "Hello".
 - After the creation of the invoice file, they should be accesible by the Administrator, so that they can be used for further processes
 ---
-#### US-11: Admin menu @Andrei Parnia
+#### US-10: Admin menu @Andrei Parnia
 - As an owner, I want to have an admin panel, where I can check the previous orders, and get a weekly sales report so I can take data driven decisions on existing and new products.
 **Acceptance criteria:**
 - *Given* the owner needs to check the previous orders, *when* it access the `Admin` menu by entering the `Administrator` name at the greeting screen, *then* it will be able to access the admin panel with a password.

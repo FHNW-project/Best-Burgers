@@ -1,6 +1,13 @@
 # And this is how our first shared Python project begins :)
 import filippo_workspace
+from datetime import datetime
 
+
+# This is how the order[] gets the name after complete_payment
+def complete_payment():
+    now = datetime.now()
+    order_name = f"order_{now:%Y%m%d-%H%M}"
+    return order_name
 
 print("_______________________________")
 print("                               ")
@@ -19,3 +26,4 @@ if answer.strip().lower() == "yes" or answer.strip().lower() == "y":
     place_order = input ("Would you like to create your own burger or preset one?")
 else:
     print ("See you the next time.")
+
