@@ -43,4 +43,4 @@ def drinks_function():
     chosen= drinks_menu[drinks_choice]
     print(LINE)
     print(f"Perfect, you choose {chosen["name"]}.")
-    return {"type": "side", "name": chosen["name"]}
+    return {"type": "side", "name": chosen["name"], "price": chosen["price"], "calories": chosen["calories"], "fat": chosen["fat"], "sugar": chosen["sugar"], "protein": chosen["protein"], "fiber": chosen["fiber"]}
