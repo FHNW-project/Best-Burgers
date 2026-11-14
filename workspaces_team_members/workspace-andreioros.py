@@ -6,3 +6,13 @@
 
 # I want to apply my student status during the final order review
 # So that I can receive a 10% discount on my purchase
+
+from datetime import datetime
+
+
+def complete_payment():
+    now = datetime.now()
+    order_name = f"order_{now:%Y%m%d-%H%M}"
+    return order_name
+
+print(complete_payment())
