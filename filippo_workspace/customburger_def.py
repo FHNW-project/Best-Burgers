@@ -44,7 +44,7 @@ sauces = menu_for("sauce")
 
 def customburger_function():
     customburger_ingredients=[]
-    
+    ingredients_ids=[]
 
     #beginning custom order
     #print buns list 
@@ -58,6 +58,7 @@ def customburger_function():
         bun_choice = input("Enter the number of your desired Bun: ").strip()
     #adding the selected bun to the ingredient list
     customburger_ingredients.append(buns[bun_choice]["name"])
+    ingredients_ids.append(buns[bun_choice]["id"])
     print("")
     print(LINE)
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
@@ -82,6 +83,7 @@ def customburger_function():
             patty_choice = input("Enter the number of the desired patty:").strip()
     #adding the selected patty to the ingredient list
         customburger_ingredients.append(patties[patty_choice]["name"])
+        ingredients_ids.append(patties[patty_choice]["id"])
         print("")
         print(LINE)
         #printing list of ingredients
@@ -115,6 +117,7 @@ def customburger_function():
             cheese_choice = input("Enter the corresponding number of the desired type of Cheese: ").strip()
     #adding the selected cheese to the ingredient list
         customburger_ingredients.append(cheeses[cheese_choice]["name"])
+        ingredients_ids.append(cheeses[cheese_choice]["id"])
         print("")
         print(LINE)
     #printing list of ingredients
@@ -147,6 +150,7 @@ def customburger_function():
             vegetable_choice = input(f"Enter the number of the desired vegetables:\n").strip().lower()
         #adding the selected vegetables to the ingredient list
         customburger_ingredients.append(vegetables[vegetable_choice]["name"])
+        ingredients_ids.append(vegetables[vegetable_choice]["id"])
         print("")
         print("------------")
     #printing list of ingredients
@@ -179,6 +183,7 @@ def customburger_function():
             sauce_choice = input(f"Enter the number of the desired sauce:\n").strip().lower()
         #adding the selected sauce to the ingredient list
         customburger_ingredients.append(sauces[sauce_choice]["name"])
+        ingredients_ids.append(sauces[sauce_choice]["id"])
         print("")
         print(LINE)
     #printing list of ingredients
@@ -189,10 +194,12 @@ def customburger_function():
         while sauce_question not in ("yes","ye","y","no","n"):
             print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
             sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
+    custom_calories = nutritional_calculator(ingredients_ids)
     print("")
     print(LINE)
     print(burgercomplete)
     print(f'{", ".join(customburger_ingredients)}.')
+    print(custom_calories)
     print("")
 #---------------------------
 # End of the definition for custom made burger
