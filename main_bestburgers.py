@@ -1,6 +1,9 @@
 # And this is how our first shared Python project begins :)
 import filippo_workspace
 from datetime import datetime
+now = datetime.now()
+line = ("-" * 100)
+space = (" " * 100)
 
 
 # This is how the order[] gets the name after complete_payment
@@ -9,13 +12,21 @@ def complete_payment():
     order_name = f"order_{now:%Y%m%d-%H%M}"
     return order_name
 
-print("_______________________________")
-print("                               ")
+
+print(line)
+print(space)
 print("*** Welcome to Best Burgers ***")
-print("_______________________________")
-print("                                                                     ")
-print(">>> I am here to guide you towards the Best Burgers you've ever had! <<<")
-print("                                                                     ")
+print(space)
+print(line)
+print(space)
+print(f"Date & Time: {now:%A, %d.%m.%Y %H:%M}")
+print(space)
+print(line)
+print(space)
+print(">>> I am ready to take your order, so you can enjoy the Best Burgers you've ever had! <<<")
+print(space)
+print(line)
+print(space)
 first_name = input("- What is your name? ")
 print("                    ")
 print (f"Hello {first_name}!")
