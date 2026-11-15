@@ -2,8 +2,6 @@ import sys
 import csv
 from pathlib import Path
 
-nextstep = "Then let's go to the next step!"
-burgercomplete = "Perfect, you have finished your Dream's Burger. This are the ingredients that you choose:"
 LINE = "="*50
 
 BASE_DIR = Path(__file__).resolve().parent.parent

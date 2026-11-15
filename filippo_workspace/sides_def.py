@@ -2,8 +2,6 @@ import sys
 import csv
 from pathlib import Path
 
-nextstep = "Then let's go to the next step!"
-burgercomplete = "Perfect, you have finished your Dream's Burger. This are the ingredients that you choose:"
 LINE = "="*50
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,5 +37,18 @@ def side_function():
     while side_choice not in sides_menu:
         print("Invalid choice, be aware that only digits can be entered.")
         side_choice = input(f"Enter the number of the desired Side:\n").strip().lower()
+    chosen = sides_menu[side_choice]
     print(LINE)
     print(f"Perfect, you choose {sides_menu[side_choice]["name"]}.")
+    return{
+        "type": "Side",
+        "name": chosen["name"], 
+        "price": float(chosen["price"]), 
+        "nutritional_value": {
+            "calories": float(chosen["calories"]), 
+            "fat": float(chosen["fat"]), 
+            "sugar": float(chosen["sugar"]), 
+            "protein": float(chosen["protein"]), 
+            "fiber": float(chosen["fiber"]),
+        },
+    }
