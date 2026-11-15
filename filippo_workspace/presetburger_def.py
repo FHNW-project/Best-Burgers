@@ -73,6 +73,11 @@ def presetburger_function():
 
     print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
     print(f"{chosencalories['calories']:.0f} Kcal - Fat: {chosencalories['fat']:.1f} - Sugar: {chosencalories['sugar']:.1f} - Protein: {chosencalories['protein']:.1f} - Fiber {chosencalories['fiber']:.1f}")
-    
+    return{
+        "type": "burger",
+        "name": chosen["name"],
+        "price": chosen["price"],
+        "nutritional_value": chosencalories
+    }
     #printing the name of the preset burger that the customer choose
     
