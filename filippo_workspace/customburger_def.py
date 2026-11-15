@@ -199,8 +199,17 @@ def customburger_function():
     print(LINE)
     print(burgercomplete)
     print(f'{", ".join(customburger_ingredients)}.')
+    print(f"{custom_calories["calories"]:.0f} Kcal - Fat {custom_calories["fat"]:.1f} - Sugar: {custom_calories["sugar"]:.1f} - Protein: {custom_calories["protein"]:.1f} - Fiber: {custom_calories["fiber"]:.1f}")
     print(custom_calories)
     print("")
+
+    return{
+         "type": "burger",
+         "name": "Custom burger",
+         "price": ...,
+         "ingredients": customburger_ingredients,
+         "nutritional_value": custom_calories
+    }
 #---------------------------
 # End of the definition for custom made burger
 
