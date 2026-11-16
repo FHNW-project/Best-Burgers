@@ -1,5 +1,3 @@
-# USER STORIES 1 - 2 - 3
-
 import sys
 import csv
 from pathlib import Path
@@ -194,7 +192,10 @@ def customburger_function():
         while sauce_question not in ("yes","ye","y","no","n"):
             print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
             sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
+    
     custom_calories = nutritional_calculator(ingredients_ids)
+    burger_price = sum(ingredients_by_id[i]["price"] for i in customburger_ids)
+
     print("")
     print(LINE)
     print(burgercomplete)
@@ -206,29 +207,11 @@ def customburger_function():
     return{
          "type": "burger",
          "name": "Custom burger",
-         "price": ...,
+         "price": burger_price,
          "ingredients": customburger_ingredients,
          "nutritional_value": custom_calories
     }
 #---------------------------
 # End of the definition for custom made burger
 
-
-#code lines to test the definition
-order_info = []
-place_order = input ("Enter the number:")
- #Create your own burger
-if place_order == "1":
-        print("Let's create your Dream's Burger!")
-        place_order = customburger_function()
-        burger_order = (f'Burger ingredients:{", ".join(place_order)}.')
-        order_info.append(burger_order)
-
-    # Choose a preset burger
-elif place_order == "2":
-        place_order = presetburger_function()
-        menu_question = input("Would you like to make a menu?")  
-                 
-else:
-                    print("Only to Test the if")
                     
