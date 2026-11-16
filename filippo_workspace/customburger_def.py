@@ -194,7 +194,7 @@ def customburger_function():
             sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
     
     custom_calories = nutritional_calculator(ingredients_ids)
-    burger_price = sum(ingredients_by_id[i]["price"] for i in customburger_ids)
+    burger_price = sum(ingredients_by_id[i]["price"] for i in ingredients_ids)
 
     print("")
     print(LINE)
