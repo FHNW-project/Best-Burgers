@@ -1,5 +1,6 @@
 # And this is how our first shared Python project begins :)
 import filippo_workspace
+import cosmin_workspace
 
 LINE = "-"*50
 order = []
@@ -58,14 +59,15 @@ if customer_name != "admin":
     else:
         print(f"See you the next time {customer_name}.")
 
+    print(LINE)
+    print(f"Order for {customer_name}")
+    print(LINE)
 
+    print(order)
 
 else:
     customer_name == "admin"
     print("Ciao Admin!")
+    cosmin_workspace.admin.admin_login()
+    
 
-print(LINE)
-print(f"Order for {customer_name}")
-print(LINE)
-
-print(order)

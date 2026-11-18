@@ -7,13 +7,12 @@ def admin_login():
         password = input()
         if password == "Password123!":
             print ("Welcome to the admin panel")
-            break
+            return True
         else:
             print("password incorrect. Please try again")
             failed_attempts = failed_attempts + 1
 
     if failed_attempts == 3:
         print ("Maximum attempts reached")
-        time.sleep(5)
-        
-admin_login()
+        time.sleep(2.5)
+    return False
