@@ -12,7 +12,7 @@ from datetime import datetime
 
 
 
-print(complete_payment())
+
 
 
 from datetime import datetime
@@ -54,10 +54,11 @@ else:
     print ("See you the next time.")
 
     def complete_payment():
-    now = datetime.now()
+        now = datetime.now()
     order_name = f"order_{now:%Y%m%d-%H%M}"
     return order_name
 
 order_name()
 complete_payment()
 
+print(complete_payment())
