@@ -1,10 +1,12 @@
 import csv
+from pathlib import Path
 
 # US-6: Nutritional values and allergens @Andrei Parnia
 
 nutritional_values = {}
+file_path = Path("csv lists") /"ingredients.csv"
 
-with open ("data/ingredients.csv", mode="r", encoding="utf-8") as ingredient_file:
+with open (file_path, mode="r", encoding="utf-8") as ingredient_file:
     ingredient_reader = csv.DictReader(ingredient_file)
     for one_ingredient in ingredient_reader:
         ingredient_id = one_ingredient["id"]
@@ -14,7 +16,7 @@ with open ("data/ingredients.csv", mode="r", encoding="utf-8") as ingredient_fil
         one_ingredient["protein"] = float(one_ingredient["protein"])
         one_ingredient["fiber"] = float(one_ingredient["fiber"])
         nutritional_values[ingredient_id] = one_ingredient
-# print(nutritional_values["bun_sesame"]["fat"])+(nutritional_values["patty_beef"]["fat"])
+    print((nutritional_values["bun_sesame"]["fat"])+(nutritional_values["patty_beef"]["fat"]))
 
 def nutritional_calculator(ingredients_id):
     nutrient_total = {
@@ -33,4 +35,4 @@ def nutritional_calculator(ingredients_id):
         nutrient_total["sugar"] = nutrient_total["sugar"] + ingredient_row["sugar"]
     return nutrient_total
 
-# test function print(nutritional_calculator(["bun_sesame", "patty_beef", "cheese_emmental"]))
+# test file print(nutritional_calculator(["bun_sesame", "patty_beef", "cheese_emmental"]))
