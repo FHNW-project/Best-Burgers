@@ -15,12 +15,15 @@ from cosmin_workspace.nutritional_calc import nutritional_calculator
 #load ingredients from Csv file
 def load_ingredients(filename="csv lists/ingredients.csv"):
     ingredients = []
-    with open(filename, newline="", encoding="utf=8") as f:
-        for row in csv.DictReader(f):
-            row["price"] = float(row["price"])
-            row["calories"]=int(row["calories"])
-            ingredients.append(row)
-    return ingredients
+    try:
+        with open(filename, newline="", encoding="utf=8") as f:
+            for row in csv.DictReader(f):
+                row["price"] = float(row["price"])
+                row["calories"]=int(row["calories"])
+                ingredients.append(row)
+        return ingredients
+    except:
+        print("Upss, file is disappeared.")
 
 #connecting the ingredient by the id to the ingredient name
 ingredients = load_ingredients()
@@ -201,7 +204,6 @@ def customburger_function():
     print(burgercomplete)
     print(f'{", ".join(customburger_ingredients)}.')
     print(f"{custom_calories["calories"]:.0f} Kcal - Fat {custom_calories["fat"]:.1f} - Sugar: {custom_calories["sugar"]:.1f} - Protein: {custom_calories["protein"]:.1f} - Fiber: {custom_calories["fiber"]:.1f}")
-    print(custom_calories)
     print("")
 
     return{
