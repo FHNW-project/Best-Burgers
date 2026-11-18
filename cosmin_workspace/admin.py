@@ -1,10 +1,10 @@
 import time
+from getpass import getpass
 
 def admin_login():
     failed_attempts = 0
     while failed_attempts < 3:
-        print("please enter the password:")
-        password = input()
+        password = getpass("Please enter the password: ", echo_char="*")
         if password == "Password123!":
             print ("Welcome to the admin panel")
             return True
