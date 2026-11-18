@@ -70,6 +70,8 @@ def presetburger_function():
         presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
     chosen = preset_menu[presetburger_choice]
     chosencalories = nutritional_calculator(chosen["ingredient_ids"])
+    #rounding the calories to value 1
+    chosencalories = {name: round(value, 1) for name, value in chosencalories.items()}
 
     print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
     print(f"{chosencalories['calories']:.0f} Kcal - Fat: {chosencalories['fat']:.1f} - Sugar: {chosencalories['sugar']:.1f} - Protein: {chosencalories['protein']:.1f} - Fiber {chosencalories['fiber']:.1f}")

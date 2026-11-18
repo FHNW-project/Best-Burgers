@@ -51,6 +51,5 @@ def drinks_function():
             "sugar": float(chosen["sugar"]), 
             "protein": float(chosen["protein"]), 
             "fiber": float(chosen["fiber"])
-        },
-        
+        },  
     }

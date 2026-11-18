@@ -1,3 +1,47 @@
+import sys
+import csv
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.append(str(BASE_DIR))
+
+#load the sizes from the csv file and changing the format from text to float number
+def load_sizes(filename="csv lists/sizes.csv"):
+    sizes=[]
+    with open(filename, newline="", encoding="utf=8") as f:
+        for row in csv.DictReader(f):
+            row["nutrition_factor"] = float(row["nutrition_factor"])
+            row["price_factor"]= float(row["price_factor"])
+            sizes.append(row)
+    return sizes
+#creation of the dictionary for sizes
+sizes= load_sizes()
+size_menu = {str(number): item for number, item in enumerate(sizes, start=1)}
+
+#def to choose the size
+def choose_size():
+    print("Which size do you want?")
+    #printing the list of the available sizes
+    for number, size in size_menu.items():
+        print(f"{number}. {size["size"]}")
+    #asking the customer to enter the number of the choose size
+    size_choice = input("Enter the number of the desired size:").strip()
+    while size_choice not in size_menu:
+        print("Invalid choice, please enter one of the number listed in the menu.")
+        size_choice = input("Enter the number of the desired size: ").strip()
+    return size_menu[size_choice]
+
+def scale_nutrition(nutrition, factor):
+    return {name: value * factor for name, value in nutrition.items()}
+
+def add_nutrition(*nutritions):
+    total = {}
+    for nutrition in nutritions:
+        for name, value in nutrition.items():
+            total[name] = total.get(name, 0) + value
+    return total
+
+
 def ask_yes_no(question):
     answer= input(question).strip().lower()
     while answer not in ("yes", "ye", "y", "no", "n"):
@@ -5,10 +49,21 @@ def ask_yes_no(question):
         answer= input(question).strip().lower()
     return answer in ("yes", "ye", "y")
 
-def make_menu(burger,side,drink,discount=0):
+def make_menu(burger,side,drink,size):
+    price = burger["price"]+(side["price"]+drink["price"])*size["price_factor"]
+
+    nutrition = add_nutrition(
+        burger["nutritional_value"],
+        scale_nutrition(side["nutritional_value"], size["nutrition_factor"]),
+        scale_nutrition(drink["nutrtional_value"], size["nutrition_factor"]),
+    )
+    
     return{
         "type": "menu",
+        "size": size["size"],
         "burger": burger,
         "side": side,
         "drink": drink,
+        "price": round(price, 2),
+        "nutritional_value": {name: round(value, 1) for name, value in nutrition.items()}
     }
