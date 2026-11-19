@@ -43,6 +43,18 @@ sauces = menu_for("sauce")
 
 #---------
 
+def customburger_recap(ingredients, ids):
+    nutritional_value = nutritional_calculator(ids)
+    price = sum(ingredients_by_id[i]["price"] for i in ids)
+    print("")
+    print(LINE)
+    print(f"Ingredient List:\n{", ".join(ingredients)}.")
+    print(f"Total calories: {nutritional_value["calories"]:,.0f} Kcal - Fat {nutritional_value["fat"]:,.1f} - Sugar: {nutritional_value["sugar"]:,.1f} - Protein: {nutritional_value["protein"]:,.1f} - Fiber: {nutritional_value["fiber"]:,.1f}")
+    print(f"Total: {price:,.2f} CHF")
+    print(LINE)
+    print("")
+    return price, nutritional_value
+
 def customburger_function():
     customburger_ingredients=[]
     ingredients_ids=[]
