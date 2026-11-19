@@ -1,16 +1,16 @@
 import sys
 import csv
 from pathlib import Path
+from . import extradef
+from cosmin_workspace.nutritional_calc import nutritional_calculator
 
+question = extradef.ask_yes_no
 nextstep = "Then let's go to the next step!"
 burgercomplete = "Perfect, you have finished your Dream's Burger. This are the ingredients that you choose:"
 LINE = "="*50
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
-
-from cosmin_workspace.nutritional_calc import nutritional_calculator
-
 
 #load ingredients from Csv file
 def load_ingredients(filename="csv lists/ingredients.csv"):
@@ -63,18 +63,13 @@ def customburger_function():
     print("")
     print(LINE)
     print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
-
     print(LINE)
     print("")
 
     #choice if customer desire a patty or not
-    patty_question = input(f"Would you like to add a patty to your burger? yes/no:\n").strip().lower()
-    while patty_question not in ("yes","ye","y","no","n"):
-        print("Invalice answer, please enter only Yes or No, other terms will not be accepted.")
-        patty_question = input(f"Would you like to add a patty to your burger? yes/no:\n").strip().lower()
-
+    patty_question = question(f"Would you like to add a patty to your burger? yes/no:\n")
     # if yes print list of the patties
-    while patty_question in ("yes","y","ye"):
+    while patty_question:
         for number, item in patties.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
     #choice of the patties
@@ -91,24 +86,16 @@ def customburger_function():
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
         print(LINE)
         print("")
-        patty_question = input(f"Would you like to add another patty to your burger? yes/no:\n").strip().lower()
-        while patty_question not in ("yes","ye","y","no","n"):
-            print("Invalice answer, please enter only Yes or No, other terms will not be accepted.")
-            patty_question = input(f"Would you like to add another patty to your burger? yes/no:\n").strip().lower()
-        
+        patty_question = question(f"Would you like to add another patty to your burger? yes/no:\n")
     print("")
     print(LINE)
     print(nextstep)
     print("")
 
     #choice if customer want cheese or not
-    cheese_question = input(f"Would you like to add a slice of cheese to your Burger? yes/no:\n").strip().lower()
-    while cheese_question not in ("yes","ye","y","no","n"):
-        print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
-        cheese_question = input(f"Would you like to add a slice of cheese to your Burger? yes/no:\n").strip().lower()
-
+    cheese_question = question(f"Would you like to add a slice of cheese to your Burger? yes/no:\n")
     #print of the list of available cheese
-    while cheese_question in ("yes" or "ye" or "y"):
+    while cheese_question:
         for number, item in cheeses.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal -  Allergens: {item["allergens"]}")
     #choice of the cheese
@@ -125,23 +112,16 @@ def customburger_function():
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
         print(LINE)
         print("")
-        cheese_question = input(f"Would you like to add another slice of cheese to your Burger? yes/no:\n").strip().lower()
-        while cheese_question not in ("yes","ye","y","no","n"):
-            print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
-            cheese_question = input(f"Would you like to add another slice of cheese to your Burger? yes/no:\n").strip().lower()
+        cheese_question = question(f"Would you like to add another slice of cheese to your Burger? yes/no:\n")
     print("")
     print(LINE)
     print(nextstep)
     print("")
 
     #choice if customer want a vegetables or not
-    vegetable_question = input(f"Would you like to add vegetables to your Burger? Yes/No:\n").strip().lower()
-    while vegetable_question not in ("yes","ye","y","no","n"):
-        print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
-        vegetable_question = input(f"Would you like to add vegetables to your Burger? Yes/No:\n").strip().lower()
-
+    vegetable_question = question(f"Would you like to add vegetables to your Burger? Yes/No:\n")
     #print list of available vegetables
-    while vegetable_question in ("yes" or "ye" or "y"):
+    while vegetable_question:
         for number, item in vegetables.items():
             print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal -  Allergens: {item["allergens"]}")
     #choice of the vegetables
@@ -158,23 +138,16 @@ def customburger_function():
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
         print("------------")
         print("")
-        vegetable_question = input(f"Would you like to add another vegetable to your Burger? yes/no:\n").strip().lower()
-        while vegetable_question not in ("yes","ye","y","no","n"):
-            print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
-            vegetable_question = input(f"Would you like to add another vegetable to your Burger? Yes/No:\n").strip().lower()
+        vegetable_question = question(f"Would you like to add another vegetable to your Burger? yes/no:\n")
     print("")
     print(LINE)
     print(nextstep)
     print("")
 
     #choice if customer want a sauce or not
-    sauce_question = input(f"Would you like to add a sauce to your burger? Yes/No:\n").strip().lower()
-    while sauce_question not in ("yes","ye","y","no","n"):
-        print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
-        sauce_question = input(f"Would you like to add a sauce to your burger? Yes/No:\n").strip().lower()
-
+    sauce_question = question(f"Would you like to add a sauce to your burger? Yes/No:\n")
     #print list of available sauces
-    while sauce_question in ("yes" or "ye" or "y"):
+    while sauce_question:
         for number, item in sauces.items():
             print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
     #choice of the sauce
@@ -191,10 +164,7 @@ def customburger_function():
         print(f'Ingredient list:\n{", ".join(customburger_ingredients)}.')
         print(LINE)
         print("")
-        sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
-        while sauce_question not in ("yes","ye","y","no","n"):
-            print("Invalid answer, please enter only Yes or No, other terms will not be accepted.")
-            sauce_question = input(f"Would you like to add another sauce to your burger? Yes/No:\n").strip().lower()
+        sauce_question = question(f"Would you like to add another sauce to your burger? Yes/No:\n")
     
     custom_calories = nutritional_calculator(ingredients_ids)
     burger_price = sum(ingredients_by_id[i]["price"] for i in ingredients_ids)
