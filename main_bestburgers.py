@@ -17,12 +17,9 @@ while True:
     if customer_name != "admin":
         print(f"Welcome to Best burger {customer_name}!")
         #Do you want to place an order?
-        answer = input (f"Would you like to place an Order?\n").strip().lower()
-        while answer not in ("yes","ye","y","no","n"):
-            print("Invalid choice, be aware that you can enter only Yes or No.")
-            answer = input(f"Would you like to place an Order?\n").strip().lower()
+        answer = filippo_workspace.extradef.ask_yes_no(f"Would you like to place an Order?\n")
 
-        if answer in ("yes","ye","y"):
+        if answer:
             ordering = True
 
             while ordering:
