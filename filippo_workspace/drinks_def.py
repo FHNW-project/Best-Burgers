@@ -15,7 +15,7 @@ def load_drinks(filename="csv lists/drinks.csv"):
         for row in csv.DictReader(f):
             row["price"]= float(row["price"])
             row["calories"]= int(row["calories"])
-            drinks.append
+            drinks.append(row)
     return drinks
 
 drinks = load_drinks()
@@ -33,16 +33,16 @@ def drinks_function():
         print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
 
     #choise of the desired drinks
-    drinks_choice= input(f"Enter the number of the desired Drink:\n")
+    drinks_choice= input(f"Enter the number of the desired Drink:\n").strip()
     while drinks_choice not in drinks_menu:
         print("Invalid choice, be aware that only the digits in the list can be enter.")
-        drinks_choice=input(f"Enter the number of the desired Drink:\n")
+        drinks_choice=input(f"Enter the number of the desired Drink:\n").strip()
 
     chosen= drinks_menu[drinks_choice]
     print(LINE)
     print(f"Perfect, you choose {chosen["name"]}.")
     return {
-        "type": "side",
+        "type": "drink",
         "name": chosen["name"], 
         "price": chosen["price"], 
         "nutritional_value": {

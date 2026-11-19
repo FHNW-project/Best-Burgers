@@ -55,7 +55,7 @@ def make_menu(burger,side,drink,size):
     nutrition = add_nutrition(
         burger["nutritional_value"],
         scale_nutrition(side["nutritional_value"], size["nutrition_factor"]),
-        scale_nutrition(drink["nutrtional_value"], size["nutrition_factor"]),
+        scale_nutrition(drink["nutritional_value"], size["nutrition_factor"]),
     )
     
     return{
