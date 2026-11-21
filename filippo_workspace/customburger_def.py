@@ -40,9 +40,7 @@ patties = menu_for("patty")
 cheeses = menu_for("cheese")
 vegetables = menu_for("vegetable")
 sauces = menu_for("sauce")
-
 #---------
-
 def customburger_recap(ingredients, ids):
     nutritional_value = nutritional_calculator(ids)
     price = sum(ingredients_by_id[i]["price"] for i in ids)
@@ -58,7 +56,6 @@ def customburger_recap(ingredients, ids):
 def customburger_function():
     customburger_ingredients=[]
     ingredients_ids=[]
-
     #beginning custom order
     #print buns list 
     print("Which bun do you want?")
@@ -73,6 +70,7 @@ def customburger_function():
     customburger_ingredients.append(buns[bun_choice]["name"])
     ingredients_ids.append(buns[bun_choice]["id"])
     burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
+    print(f"\n{LINE}\n{nextstep}\n{LINE}\n \n")
 
     #choice if customer desire a patty or not
     patty_question = question(f"Would you like to add a patty to your burger? yes/no:\n")
@@ -89,12 +87,8 @@ def customburger_function():
         customburger_ingredients.append(patties[patty_choice]["name"])
         ingredients_ids.append(patties[patty_choice]["id"])
         burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
-
         patty_question = question(f"Would you like to add another patty to your burger? yes/no:\n")
-    print("")
-    print(LINE)
-    print(nextstep)
-    print("")
+    print(f"\n{LINE}\n{nextstep}\n{LINE}\n \n")
 
     #choice if customer want cheese or not
     cheese_question = question(f"Would you like to add a slice of cheese to your Burger? yes/no:\n")
@@ -112,10 +106,7 @@ def customburger_function():
         ingredients_ids.append(cheeses[cheese_choice]["id"])
         burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
         cheese_question = question(f"Would you like to add another slice of cheese to your Burger? yes/no:\n")
-    print("")
-    print(LINE)
-    print(nextstep)
-    print("")
+    print(f"\n{LINE}\n{nextstep}\n{LINE}\n \n")
 
     #choice if customer want a vegetables or not
     vegetable_question = question(f"Would you like to add vegetables to your Burger? Yes/No:\n")
@@ -133,10 +124,7 @@ def customburger_function():
         ingredients_ids.append(vegetables[vegetable_choice]["id"])
         burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
         vegetable_question = question(f"Would you like to add another vegetable to your Burger? yes/no:\n")
-    print("")
-    print(LINE)
-    print(nextstep)
-    print("")
+    print(f"\n{LINE}\n{nextstep}\n{LINE}\n \n")
 
     #choice if customer want a sauce or not
     sauce_question = question(f"Would you like to add a sauce to your burger? Yes/No:\n")
@@ -154,12 +142,10 @@ def customburger_function():
         ingredients_ids.append(sauces[sauce_choice]["id"])
         burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
         sauce_question = question(f"Would you like to add another sauce to your burger? Yes/No:\n")
-    
     custom_calories = nutritional_calculator(ingredients_ids)
     burger_price = sum(ingredients_by_id[i]["price"] for i in ingredients_ids)
 
     burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
-
     return{
          "type": "burger",
          "name": "Custom burger",

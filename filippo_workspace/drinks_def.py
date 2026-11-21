@@ -3,8 +3,7 @@ import csv
 from pathlib import Path
 
 ##### USER INTERFACE ELEMENTS #####
-LINE = "-"*50
-LIINE = "="*50
+LINE = "="*50
 SPACE = " "*50
 ##### USER INTERFACE ELEMENTS #####
 
@@ -35,7 +34,7 @@ def drinks_function():
     print(SPACE)
     print("Which of the following drink do you want?")
     print(SPACE)
-    print(LIINE)
+    print(LINE)
     #printing the list of the available drinks
     for number,item in drinks_menu.items():
         print(SPACE)
@@ -44,11 +43,11 @@ def drinks_function():
 
     #choice of the desired drinks
     print(SPACE)
-    print(LIINE)
+    print(LINE)
     print(SPACE)
     drinks_choice= input(f"Enter the number of the desired Drink: ").strip()
     print(SPACE)
-    print(LIINE)
+    print(LINE)
 
     while drinks_choice not in drinks_menu:
         print("Invalid choice, be aware that only the digits in the list can be enter.")

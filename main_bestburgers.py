@@ -4,13 +4,9 @@ import cosmin_workspace
 import pricing
 
 ##### USER INTERFACE ELEMENTS #####
-LINE = "-"*50
-LIINE = "="*50
+LINE = "="*50
 SPACE = " "*50
 ##### USER INTERFACE ELEMENTS #####
-
-order = []
-
 ordering_menu = {
     "1": "Order a Custom made Burger",
     "2": "Order a Preset Burger",
@@ -18,6 +14,7 @@ ordering_menu = {
     "4": "Go directly to Drinks"
 }
 
+order = []
 while True:
     customer_name = input(f"What is your name? \n")
     if customer_name != "admin":
@@ -25,7 +22,7 @@ while True:
         #Do you want to place an order?
         answer = filippo_workspace.extradef.ask_yes_no(f"Would you like to place an Order? (Y/N)\n")
         print(SPACE)
-        print(LIINE)
+        print(LINE)
 
         if answer:
             ordering = True
@@ -37,11 +34,11 @@ while True:
                     print(f"{number}. {text}")
                     print(SPACE)
 # SELECTION PROMPT #                    
-                print(LIINE)               
+                print(LINE)               
                 print(pricing.subtotal_prompt(order))
                 menu_choice = input("Enter your selection: ").strip()  
                 print(SPACE)
-                print(LIINE)  
+                print(LINE)  
 
                 while menu_choice not in ordering_menu:
                     print("Invalid choice, please enter the number of your choice.")
