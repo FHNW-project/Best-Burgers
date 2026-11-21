@@ -16,7 +16,8 @@ with open (file_path, mode="r", encoding="utf-8") as ingredient_file:
         one_ingredient["protein"] = float(one_ingredient["protein"])
         one_ingredient["fiber"] = float(one_ingredient["fiber"])
         nutritional_values[ingredient_id] = one_ingredient
-    print((nutritional_values["bun_sesame"]["fat"])+(nutritional_values["patty_beef"]["fat"]))
+# deleted line: this was causing the 29.5 - was it a test line?        
+# print((nutritional_values["bun_sesame"]["fat"])+(nutritional_values["patty_beef"]["fat"]))       
 
 def nutritional_calculator(ingredients_id):
     nutrient_total = {

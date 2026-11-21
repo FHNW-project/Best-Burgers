@@ -27,6 +27,7 @@ def complete_payment():
     order_name = f"order_{now:%Y%m%d-%H%M}"
     return order_name
 
+def write_invoice(customer_name, order, total, payment_method): ...
 
 print(line)
 print(space)

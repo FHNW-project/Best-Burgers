@@ -1,8 +1,14 @@
 # And this is how our first shared Python project begins :)
 import filippo_workspace
 import cosmin_workspace
+import pricing
 
+##### USER INTERFACE ELEMENTS #####
 LINE = "-"*50
+LIINE = "="*50
+SPACE = " "*50
+##### USER INTERFACE ELEMENTS #####
+
 order = []
 
 ordering_menu = {
@@ -13,11 +19,13 @@ ordering_menu = {
 }
 
 while True:
-    customer_name = input(f"What is your name?\n")
+    customer_name = input(f"What is your name? \n")
     if customer_name != "admin":
         print(f"Welcome to Best burger {customer_name}!")
         #Do you want to place an order?
-        answer = filippo_workspace.extradef.ask_yes_no(f"Would you like to place an Order?\n")
+        answer = filippo_workspace.extradef.ask_yes_no(f"Would you like to place an Order? (Y/N)\n")
+        print(SPACE)
+        print(LIINE)
 
         if answer:
             ordering = True
@@ -27,11 +35,19 @@ while True:
                 print("")
                 for number, text in ordering_menu.items():
                     print(f"{number}. {text}")
+                    print(SPACE)
+# SELECTION PROMPT #                    
+                print(LIINE)               
+                print(pricing.subtotal_prompt(order))
+                menu_choice = input("Enter your selection: ").strip()  
+                print(SPACE)
+                print(LIINE)  
 
-                menu_choice = input(f"Enter the number:\n").strip()
                 while menu_choice not in ordering_menu:
                     print("Invalid choice, please enter the number of your choice.")
                     menu_choice = input(f"Enter the number:\n").strip()
+                    print(SPACE)
+                    print(LINE)
 
                 if menu_choice in ("1","2"):
                     if menu_choice == "1":
@@ -43,7 +59,7 @@ while True:
                         size = filippo_workspace.extradef.choose_size()
                         side = filippo_workspace.sides_def.side_function()
                         drinks = filippo_workspace.drinks_def.drinks_function()
-                        order.append(filippo_workspace.extradef.make_menu(burger, side, drink, size))
+                        order.append(filippo_workspace.extradef.make_menu(burger, side, drinks, size))
                     else:
                         order.append(burger)
                 elif menu_choice == "3":
@@ -52,7 +68,7 @@ while True:
                 elif menu_choice == "4":
                     order.append(filippo_workspace.drinks_def.drinks_function())
 
-                ordering = filippo_workspace.extradef.ask_yes_no(f"Would you like to order something else? yes/no\n")
+                ordering = filippo_workspace.extradef.ask_yes_no(f"Would you like to order something else? (yes/no)\n")
 
         else:
             print(f"See you the next time {customer_name}.")

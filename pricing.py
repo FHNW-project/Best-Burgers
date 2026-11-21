@@ -3,15 +3,18 @@ VAT_REDUCED = 0.026
 VAT_NONE = 0.0
 STUDENT_DISCOUNT = 0.15
 
+##### USER INTERFACE ELEMENTS #####
+LINE = "-"*50
 
-def calculate_total(price, quantity):
-    total = price*quantity
-    return total
+#-----------------------------------------------------------#
 
-def calculate_vat(price_inc_vat, vat_rate):
-    vat_amount = price_inc_vat-price_inc_vat/(1+vat_rate)
-    return vat_amount
+def subtotal(order):
+    total = sum(item["price"] for item in order)
+    return round(total, 2)
 
-def calculate_student_total(total, student_discount):
-    student_total = (total-(total*STUDENT_DISCOUNT))
-    return student_total
+
+def subtotal_prompt(order):
+    total = subtotal(order)
+    if total == 0:
+        return ""
+    return f"Your Subtotal is now: CHF {total:.2f} (incl. VAT)  "

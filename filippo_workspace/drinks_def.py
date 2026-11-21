@@ -2,7 +2,12 @@ import sys
 import csv
 from pathlib import Path
 
-LINE = "="*50
+##### USER INTERFACE ELEMENTS #####
+LINE = "-"*50
+LIINE = "="*50
+SPACE = " "*50
+##### USER INTERFACE ELEMENTS #####
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
@@ -27,19 +32,31 @@ drinks_menu = drinks_menu_for()
 #def ordering drinks
 def drinks_function():
     #beginning drinks order
+    print(SPACE)
     print("Which of the following drink do you want?")
+    print(SPACE)
+    print(LIINE)
     #printing the list of the available drinks
     for number,item in drinks_menu.items():
+        print(SPACE)
         print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
+        
 
-    #choise of the desired drinks
-    drinks_choice= input(f"Enter the number of the desired Drink:\n").strip()
+    #choice of the desired drinks
+    print(SPACE)
+    print(LIINE)
+    print(SPACE)
+    drinks_choice= input(f"Enter the number of the desired Drink: ").strip()
+    print(SPACE)
+    print(LIINE)
+
     while drinks_choice not in drinks_menu:
         print("Invalid choice, be aware that only the digits in the list can be enter.")
-        drinks_choice=input(f"Enter the number of the desired Drink:\n").strip()
+        drinks_choice=input(f"Enter the number of the desired Drink: ").strip()
+        print(SPACE)
+        print(LINE)
 
     chosen= drinks_menu[drinks_choice]
-    print(LINE)
     print(f"Perfect, you choose {chosen["name"]}.")
     return {
         "type": "drink",
