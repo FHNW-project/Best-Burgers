@@ -7,8 +7,6 @@ LINE = "="*50
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
 
-from cosmin_workspace.nutritional_calc import nutritional_calculator
-
 def load_sides(filename="csv lists/sides.csv"):
     sides = []
     with open(filename, newline="", encoding="utf=8") as f:

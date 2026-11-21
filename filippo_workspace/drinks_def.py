@@ -6,11 +6,9 @@ from pathlib import Path
 LINE = "="*50
 ##### USER INTERFACE ELEMENTS #####
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
 
-from cosmin_workspace.nutritional_calc import nutritional_calculator
 #formatting the line of the drinks and append it to drinks
 def load_drinks(filename="csv lists/drinks.csv"):
     drinks = []
@@ -37,13 +35,10 @@ def drinks_function(price_factor = 1.0, nutrition_factor = 1.0):
         real_price = item["price"]*price_factor
         real_calories = item["calories"]*nutrition_factor
         print (f"{number}. {item["name"]} - CHF {real_price:,.2f} - {real_calories} Kcal - Allergens: {item["allergens"]}")
-        
-
     #choice of the desired drinks
     print("")
     drinks_choice= input(f"Enter the number of the desired Drink:\n").strip()
     print(f"\n{LINE}")
-
     while drinks_choice not in drinks_menu:
         print("")
         print("Invalid choice, be aware that only the digits in the list can be enter.")
