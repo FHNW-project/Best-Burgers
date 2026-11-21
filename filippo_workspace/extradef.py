@@ -4,6 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
+LINE = "="*50
 
 #load the sizes from the csv file and changing the format from text to float number
 def load_sizes(filename="csv lists/sizes.csv"):
@@ -20,15 +21,17 @@ size_menu = {str(number): item for number, item in enumerate(sizes, start=1)}
 
 #def to choose the size
 def choose_size():
-    print("Which size do you want?")
+    print("")
+    print(f"Which size do you want?\n")
     #printing the list of the available sizes
     for number, size in size_menu.items():
         print(f"{number}. {size["size"]}")
     #asking the customer to enter the number of the choose size
-    size_choice = input("Enter the number of the desired size:").strip()
+    size_choice = input(f"\nEnter the number of the desired size:\n").strip()
     while size_choice not in size_menu:
         print("Invalid choice, please enter one of the number listed in the menu.")
-        size_choice = input("Enter the number of the desired size: ").strip()
+        size_choice = input(f"Enter the number of the desired size\n").strip()
+    print(f"{LINE}\n")
     return size_menu[size_choice]
 
 def scale_nutrition(nutrition, factor):
@@ -45,6 +48,7 @@ def add_nutrition(*nutritions):
 def ask_yes_no(question):
     answer= input(question).strip().lower()
     while answer not in ("yes", "ye", "y", "no", "n"):
+        print("")
         print("Invalid choice, please answer yes or no.")
         answer= input(question).strip().lower()
     return answer in ("yes", "ye", "y")

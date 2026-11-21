@@ -17,34 +17,30 @@ ordering_menu = {
 order = []
 while True:
     customer_name = input(f"What is your name?\n")
+    print("")
     if customer_name != "admin":
         print(f"Welcome to Best burger {customer_name}!")
+        print("")
         #Do you want to place an order?
         answer = filippo_workspace.extradef.ask_yes_no(f"Would you like to place an Order? (Y/N)\n")
-        print(SPACE)
-        print(LINE)
+        print(f"{LINE}\n{SPACE}") 
 
         if answer:
             ordering = True
 
             while ordering:
                 #show the Ordering Menu
-                print("")
                 for number, text in ordering_menu.items():
                     print(f"{number}. {text}")
-                    print(SPACE)
 # SELECTION PROMPT #                    
-                print(LINE)               
                 print(pricing.subtotal_prompt(order))
-                menu_choice = input("Enter your selection: ").strip()  
-                print(SPACE)
-                print(LINE)  
+                menu_choice = input(f"Enter your selection:\n").strip()  
+                print(f"{LINE}\n")  
 
                 while menu_choice not in ordering_menu:
                     print("Invalid choice, please enter the number of your choice.")
                     menu_choice = input(f"Enter the number:\n").strip()
-                    print(SPACE)
-                    print(LINE)
+                    print(f"{SPACE}\n{LINE}") 
 
                 if menu_choice in ("1","2"):
                     if menu_choice == "1":
@@ -52,7 +48,7 @@ while True:
                     else:
                         burger = filippo_workspace.presetburger_def.presetburger_function()
 
-                    if filippo_workspace.extradef.ask_yes_no(f"Would you like to make a Menu?\n"):
+                    if filippo_workspace.extradef.ask_yes_no(f"{LINE}\n \nWould you like to make a Menu?\n"):
                         size = filippo_workspace.extradef.choose_size()
                         side = filippo_workspace.sides_def.side_function()
                         drink = filippo_workspace.drinks_def.drinks_function()

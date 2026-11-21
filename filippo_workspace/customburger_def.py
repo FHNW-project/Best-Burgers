@@ -62,10 +62,13 @@ def customburger_function():
     for number, item in buns.items():
         print (f"{number}. {item['name']} - CHF {item['price']:.2f} - {item['calories']} Kcal - Allergens: {item['allergens']}")
     #choice of the buns
+    print ("")
     bun_choice = input(f"Enter the number of your desired Bun:\n").strip()
+    print("")
     while bun_choice not in buns:
         print("Invalid choice, please be aware that only digits are accepted.")
         bun_choice = input("Enter the number of your desired Bun: ").strip()
+        print("")
     #adding the selected bun to the ingredient list
     customburger_ingredients.append(buns[bun_choice]["name"])
     ingredients_ids.append(buns[bun_choice]["id"])
@@ -75,42 +78,45 @@ def customburger_function():
     #choice if customer desire a patty or not
     patty_question = question(f"Would you like to add a patty to your burger? yes/no:\n")
     # if yes print list of the patties
-    while patty_question:
+    while patty_question: #mean while the question is True entere in the while circle
         for number, item in patties.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
     #choice of the patties
-        patty_choice = input("Enter the number of the desired Patty:").strip()
+        print("")
+        patty_choice = input(f"Enter the number of the desired Patty:\n").strip()
         while patty_choice not in patties:
             print("Invalid choice, please be aware that only digits are accepted.")
-            patty_choice = input("Enter the number of the desired patty:").strip()
+            patty_choice = input(f"Enter the number of the desired patty:\n").strip()
     #adding the selected patty to the ingredient list
         customburger_ingredients.append(patties[patty_choice]["name"])
         ingredients_ids.append(patties[patty_choice]["id"])
         burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
         patty_question = question(f"Would you like to add another patty to your burger? yes/no:\n")
-    print(f"\n{LINE}\n{nextstep}\n{LINE}\n \n")
+    print(f"\n{nextstep}\n \n")
 
     #choice if customer want cheese or not
     cheese_question = question(f"Would you like to add a slice of cheese to your Burger? yes/no:\n")
     #print of the list of available cheese
+    print("")
     while cheese_question:
         for number, item in cheeses.items():
             print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal -  Allergens: {item["allergens"]}")
     #choice of the cheese
-        cheese_choice = input("Enter the corresponding number of the desired type of Cheese: ").strip()
+        cheese_choice = input(f"Enter the number of the desired type of Cheese:\n").strip()
         while cheese_choice not in cheeses:
             print ("Invalid choice, please be aware that only digits are accepted.")
-            cheese_choice = input("Enter the corresponding number of the desired type of Cheese: ").strip()
+            cheese_choice = input(f"Enter the number of the desired type of Cheese:\n").strip()
     #adding the selected cheese to the ingredient list
         customburger_ingredients.append(cheeses[cheese_choice]["name"])
         ingredients_ids.append(cheeses[cheese_choice]["id"])
         burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
         cheese_question = question(f"Would you like to add another slice of cheese to your Burger? yes/no:\n")
-    print(f"\n{LINE}\n{nextstep}\n{LINE}\n \n")
+    print(f"\n{nextstep}\n \n")
 
     #choice if customer want a vegetables or not
     vegetable_question = question(f"Would you like to add vegetables to your Burger? Yes/No:\n")
     #print list of available vegetables
+    print("")
     while vegetable_question:
         for number, item in vegetables.items():
             print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal -  Allergens: {item["allergens"]}")
@@ -124,7 +130,7 @@ def customburger_function():
         ingredients_ids.append(vegetables[vegetable_choice]["id"])
         burger_recap = customburger_recap(customburger_ingredients, ingredients_ids)
         vegetable_question = question(f"Would you like to add another vegetable to your Burger? yes/no:\n")
-    print(f"\n{LINE}\n{nextstep}\n{LINE}\n \n")
+    print(f"\n{nextstep}\n \n")
 
     #choice if customer want a sauce or not
     sauce_question = question(f"Would you like to add a sauce to your burger? Yes/No:\n")

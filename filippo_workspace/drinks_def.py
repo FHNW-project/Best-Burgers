@@ -4,7 +4,6 @@ from pathlib import Path
 
 ##### USER INTERFACE ELEMENTS #####
 LINE = "="*50
-SPACE = " "*50
 ##### USER INTERFACE ELEMENTS #####
 
 
@@ -31,32 +30,27 @@ drinks_menu = drinks_menu_for()
 #def ordering drinks
 def drinks_function():
     #beginning drinks order
-    print(SPACE)
     print("Which of the following drink do you want?")
-    print(SPACE)
-    print(LINE)
+    print("")
     #printing the list of the available drinks
     for number,item in drinks_menu.items():
-        print(SPACE)
         print(f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
         
 
     #choice of the desired drinks
-    print(SPACE)
-    print(LINE)
-    print(SPACE)
-    drinks_choice= input(f"Enter the number of the desired Drink: ").strip()
-    print(SPACE)
-    print(LINE)
+    print("")
+    drinks_choice= input(f"Enter the number of the desired Drink:\n").strip()
+    print(f"\n{LINE}")
 
     while drinks_choice not in drinks_menu:
+        print("")
         print("Invalid choice, be aware that only the digits in the list can be enter.")
-        drinks_choice=input(f"Enter the number of the desired Drink: ").strip()
-        print(SPACE)
-        print(LINE)
+        drinks_choice=input(f"Enter the number of the desired Drink:\n").strip()
+        print(f"\n{LINE}")
 
     chosen= drinks_menu[drinks_choice]
-    print(f"Perfect, you choose {chosen["name"]}.")
+    print(f"Perfect, you choose {chosen["name"]} for {chosen["price"]:,.2f} CHF.")
+    print(f"{LINE}\n")
     return {
         "type": "drink",
         "name": chosen["name"], 

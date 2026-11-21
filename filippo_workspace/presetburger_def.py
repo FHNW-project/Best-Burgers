@@ -54,14 +54,16 @@ preset_menu = preset_menu_for()
 def presetburger_function():
     #beggining preset order
     print("Which Preset Burger do you want?")
+    print("")
     #showing the list of the available Preset
     for number, burger in preset_menu.items():
         ids = burger["ingredient_ids"]
         names = ", ".join(ingredients_by_id[i]["name"] for i in ids)
         allergens = ", ".join(presetburger_allergens(ids)) or "none"
         print(f"{number}. {burger['name']} - CHF {burger['price']:.2f}")
-        print(f" Ingredients: {names}")
-        print(f" Allergens: {allergens}")
+        print(f"  Ingredients: {names}")
+        print(f"  Allergens: {allergens}")
+        print("")
     
     #customer choose the preset burger
     presetburger_choice = input(f"Enter the number of the desired Burger:\n").strip()
@@ -72,7 +74,7 @@ def presetburger_function():
     chosencalories = nutritional_calculator(chosen["ingredient_ids"])
     #rounding the calories to value 1
     chosencalories = {name: round(value, 1) for name, value in chosencalories.items()}
-
+    print(f"\n{LINE}")
     print (f"Wonderful, you choose: {preset_menu[presetburger_choice]['name']}")
     print(f"{chosencalories['calories']:.0f} Kcal - Fat: {chosencalories['fat']:.1f} - Sugar: {chosencalories['sugar']:.1f} - Protein: {chosencalories['protein']:.1f} - Fiber {chosencalories['fiber']:.1f}")
     return{

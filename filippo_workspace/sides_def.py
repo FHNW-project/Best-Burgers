@@ -25,21 +25,24 @@ def sides_menu_for():
 sides_menu = sides_menu_for()
 
 def side_function():
-    
     #beginning side order
     print("Which of the following Sides do you want?")
+    print("")
     #printing the list of the available Sides
     for number, item in sides_menu.items():
         print (f"{number}. {item["name"]} - CHF {item["price"]:.2f} - {item["calories"]} Kcal - Allergens: {item["allergens"]}")
 
     #choise of the desired Side
+    print("")
     side_choice = input(f"Enter the number of the desired Side:\n").strip().lower()
     while side_choice not in sides_menu:
+        print("")
         print("Invalid choice, be aware that only digits can be entered.")
         side_choice = input(f"Enter the number of the desired Side:\n").strip().lower()
     chosen = sides_menu[side_choice]
-    print(LINE)
-    print(f"Perfect, you choose {sides_menu[side_choice]["name"]}.")
+    print(f"\n{LINE}")
+    print(f"Perfect, you choose {chosen["name"]} for {chosen["price"]:,.2f} CHF.")
+    print(f"{LINE}\n")
     return{
         "type": "Side",
         "name": chosen["name"], 
