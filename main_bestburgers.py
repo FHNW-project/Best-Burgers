@@ -16,7 +16,7 @@ ordering_menu = {
 
 order = []
 while True:
-    customer_name = input(f"What is your name? \n")
+    customer_name = input(f"What is your name?\n")
     if customer_name != "admin":
         print(f"Welcome to Best burger {customer_name}!")
         #Do you want to place an order?
@@ -55,8 +55,8 @@ while True:
                     if filippo_workspace.extradef.ask_yes_no(f"Would you like to make a Menu?\n"):
                         size = filippo_workspace.extradef.choose_size()
                         side = filippo_workspace.sides_def.side_function()
-                        drinks = filippo_workspace.drinks_def.drinks_function()
-                        order.append(filippo_workspace.extradef.make_menu(burger, side, drinks, size))
+                        drink = filippo_workspace.drinks_def.drinks_function()
+                        order.append(filippo_workspace.extradef.make_menu(burger, side, drink, size))
                     else:
                         order.append(burger)
                 elif menu_choice == "3":
@@ -65,7 +65,7 @@ while True:
                 elif menu_choice == "4":
                     order.append(filippo_workspace.drinks_def.drinks_function())
 
-                ordering = filippo_workspace.extradef.ask_yes_no(f"Would you like to order something else? (yes/no)\n")
+                ordering = filippo_workspace.extradef.ask_yes_no(f"Would you like to order something else? (Y/N)\n")
 
         else:
             print(f"See you the next time {customer_name}.")
