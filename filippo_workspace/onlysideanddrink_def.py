@@ -2,7 +2,8 @@ import sys
 import csv
 from pathlib import Path
 import filippo_workspace
-import extradef
+
+extradef = filippo_workspace.extradef
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
@@ -11,7 +12,7 @@ sys.path.append(str(BASE_DIR))
 def onlyside_function():
     size = extradef.choose_size()
     side = filippo_workspace.sides_def.side_function(size["price_factor"], size["nutrition_factor"])
-    return filippo_workspace.extradef.side_size(side, size)
+    return side_size(side, size)
 
 def side_size(side, size):
     price = side["price"]*size["price_factor"]
@@ -30,7 +31,7 @@ def side_size(side, size):
 def onlydrink_function():
     size = extradef.choose_size()
     drink = filippo_workspace.drinks_def.drinks_function(size["price_factor"], size["nutrition_factor"])
-    return filippo_workspace.extradef.drink_size(drink, size)
+    return drink_size(drink, size)
 
 def drink_size(drink, size):
     price = drink["price"]* size["price_factor"]

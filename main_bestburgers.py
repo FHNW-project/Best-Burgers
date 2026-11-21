@@ -49,10 +49,7 @@ while True:
                         burger = filippo_workspace.presetburger_def.presetburger_function()
 
                     if filippo_workspace.extradef.ask_yes_no(f"{LINE}\n \nWould you like to make a Menu?\n"):
-                        size = filippo_workspace.extradef.choose_size()
-                        side = filippo_workspace.sides_def.side_function()
-                        drink = filippo_workspace.drinks_def.drinks_function()
-                        order.append(filippo_workspace.extradef.make_menu(burger, side, drink, size))
+                        order.append(filippo_workspace.extradef.menu_function(burger))
                     else:
                         order.append(burger)
                 elif menu_choice == "3":
@@ -62,6 +59,7 @@ while True:
                     order.append(filippo_workspace.onlysideanddrink_def.onlydrink_function())
 
                 ordering = filippo_workspace.extradef.ask_yes_no(f"Would you like to order something else? (Y/N)\n")
+                print(f"\n {LINE}")
 
         else:
             print(f"See you the next time {customer_name}.")

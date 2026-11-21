@@ -46,7 +46,7 @@ def drinks_function(price_factor = 1.0, nutrition_factor = 1.0):
         print(f"\n{LINE}")
 
     chosen= drinks_menu[drinks_choice]
-    print(f"Perfect, you choose {chosen["name"]} for {chosen["price"]:,.2f} CHF.")
+    print(f"Perfect, you choose {chosen["name"]}.")
     print(f"{LINE}\n")
     return {
         "type": "drink",
