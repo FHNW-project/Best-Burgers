@@ -1,6 +1,7 @@
 import sys
 import csv
 from pathlib import Path
+import filippo_workspace
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
@@ -71,3 +72,9 @@ def make_menu(burger,side,drink,size):
         "price": round(price, 2),
         "nutritional_value": {name: round(value, 1) for name, value in nutrition.items()}
     }
+
+def menu_function(burger):
+     size = choose_size()
+     side = filippo_workspace.sides_def.side_function(size["price_factor"], size["nutrition_factor"])
+     drink = filippo_workspace.drinks_def.drinks_function(size["price_factor"], size["nutrition_factor"])
+     return make_menu(burger, side, drink, size)
