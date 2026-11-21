@@ -56,10 +56,10 @@ while True:
                     else:
                         order.append(burger)
                 elif menu_choice == "3":
-                    order.append(filippo_workspace.sides_def.side_function())
+                    order.append(filippo_workspace.onlysideanddrink_def.onlyside_function())
 
                 elif menu_choice == "4":
-                    order.append(filippo_workspace.drinks_def.drinks_function())
+                    order.append(filippo_workspace.onlysideanddrink_def.onlydrink_function())
 
                 ordering = filippo_workspace.extradef.ask_yes_no(f"Would you like to order something else? (Y/N)\n")
 
