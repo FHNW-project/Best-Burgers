@@ -1,0 +1,11 @@
+order_number;store;register;cashier;date;time;customer;item_no;item_name;category;size;quantity;unit_price;vat_rate;item_total;ingredients;discount_rate;subtotal;discount;total;vat_amount;payment_method;rating
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;1;Menu: Classic Beef Burger + Mayonnaise dip + Lemonade 0.5L;menu;Large;1;12.84;0.026;12.84;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;2;Fish Burger;burger;;1;6.20;0.026;6.20;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;3;Garlic dip (Small);side;Small;1;0.77;0.026;0.77;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;4;Menu: Classic Beef Burger + Onion rings + Apple juice 0.3L;menu;Medium;1;16.40;0.026;16.40;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;5;Still water 0.5L (Small);drink;Small;1;2.12;0.026;2.12;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;6;Classic Beef Burger;burger;;1;7.90;0.026;7.90;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;7;Custom burger;burger;;1;10.50;0.026;10.50;Classic bun, Beef patty, Grilled chicken patty, Vegan cheese slice, Jalapenos, Cucumber slices;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;8;BBQ dip (Small);side;Small;1;0.68;0.026;0.68;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;9;Lemonade 0.5L (Large);drink;Large;1;4.02;0.026;4.02;;0.0;70.93;0.00;70.93;1.80;default;
+order_20261106-161325;Best Burgers;1;Self-service;2026-11-06;16:13:25;Anna;10;Premium Beef Burger;burger;;1;9.50;0.026;9.50;;0.0;70.93;0.00;70.93;1.80;default;

@@ -1,0 +1,4 @@
+order_number;store;register;cashier;date;time;customer;item_no;item_name;category;size;quantity;unit_price;vat_rate;item_total;ingredients;discount_rate;subtotal;discount;total;vat_amount;payment_method;rating
+order_20261113-214545;Best Burgers;1;Self-service;2026-11-13;21:45:45;Elena;1;Vanilla milkshake 0.4L (Medium);drink;Medium;1;5.50;0.026;5.50;;0.0;37.55;0.00;37.55;0.95;default;
+order_20261113-214545;Best Burgers;1;Self-service;2026-11-13;21:45:45;Elena;2;Menu: Vegan Burger + Coleslaw + Cola 0.5L;menu;Small;1;13.60;0.026;13.60;;0.0;37.55;0.00;37.55;0.95;default;
+order_20261113-214545;Best Burgers;1;Self-service;2026-11-13;21:45:45;Elena;3;Menu: Vegetarian Burger + Mozzarella sticks + Beer 0.33L;menu;Large;1;18.45;0.026;18.45;;0.0;37.55;0.00;37.55;0.95;default;

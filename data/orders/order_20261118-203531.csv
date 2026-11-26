@@ -1,0 +1,7 @@
+order_number;store;register;cashier;date;time;customer;item_no;item_name;category;size;quantity;unit_price;vat_rate;item_total;ingredients;discount_rate;subtotal;discount;total;vat_amount;payment_method;rating
+order_20261118-203531;Best Burgers;1;Self-service;2026-11-18;20:35:31;Felix;1;Vegan Burger;burger;;1;7.90;0.026;7.90;;0.0;33.23;0.00;33.23;0.84;default;
+order_20261118-203531;Best Burgers;1;Self-service;2026-11-18;20:35:31;Felix;2;Garlic dip (Large);side;Large;1;1.03;0.026;1.03;;0.0;33.23;0.00;33.23;0.84;default;
+order_20261118-203531;Best Burgers;1;Self-service;2026-11-18;20:35:31;Felix;3;Orange juice 0.3L (Medium);drink;Medium;1;4.00;0.026;4.00;;0.0;33.23;0.00;33.23;0.84;default;
+order_20261118-203531;Best Burgers;1;Self-service;2026-11-18;20:35:31;Felix;4;Classic Beef Burger;burger;;1;7.90;0.026;7.90;;0.0;33.23;0.00;33.23;0.84;default;
+order_20261118-203531;Best Burgers;1;Self-service;2026-11-18;20:35:31;Felix;5;Custom burger;burger;;1;6.90;0.026;6.90;Wholegrain bun, Breaded cod patty, Emmental slice, Burger sauce;0.0;33.23;0.00;33.23;0.84;default;
+order_20261118-203531;Best Burgers;1;Self-service;2026-11-18;20:35:31;Felix;6;Chicken nuggets (Medium);side;Medium;1;5.50;0.026;5.50;;0.0;33.23;0.00;33.23;0.84;default;

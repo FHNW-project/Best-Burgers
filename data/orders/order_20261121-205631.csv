@@ -1,0 +1,5 @@
+order_number;store;register;cashier;date;time;customer;item_no;item_name;category;size;quantity;unit_price;vat_rate;item_total;ingredients;discount_rate;subtotal;discount;total;vat_amount;payment_method;rating
+order_20261121-205631;Best Burgers;1;Self-service;2026-11-21;20:56:31;Marco;1;Menu: Vegan Burger + Fries + Vanilla milkshake 0.4L;menu;Large;1;18.25;0.026;18.25;;0.0;30.52;0.00;30.52;0.77;default;
+order_20261121-205631;Best Burgers;1;Self-service;2026-11-21;20:56:31;Marco;2;Still water 0.5L (Medium);drink;Medium;1;2.50;0.026;2.50;;0.0;30.52;0.00;30.52;0.77;default;
+order_20261121-205631;Best Burgers;1;Self-service;2026-11-21;20:56:31;Marco;3;Beer 0.33L (Large);drink;Large;1;5.17;0.026;5.17;;0.0;30.52;0.00;30.52;0.77;default;
+order_20261121-205631;Best Burgers;1;Self-service;2026-11-21;20:56:31;Marco;4;Orange juice 0.3L (Large);drink;Large;1;4.60;0.026;4.60;;0.0;30.52;0.00;30.52;0.77;default;

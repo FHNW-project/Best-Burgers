@@ -1,0 +1,4 @@
+order_number;store;register;cashier;date;time;customer;item_no;item_name;category;size;quantity;unit_price;vat_rate;item_total;ingredients;discount_rate;subtotal;discount;total;vat_amount;payment_method;rating
+order_20261122-175833;Best Burgers;1;Self-service;2026-11-22;17:58:33;Mia;1;Chicken nuggets (Medium);side;Medium;1;5.50;0.026;5.50;;0.0;12.20;0.00;12.20;0.31;default;
+order_20261122-175833;Best Burgers;1;Self-service;2026-11-22;17:58:33;Mia;2;Coleslaw (Medium);side;Medium;1;3.20;0.026;3.20;;0.0;12.20;0.00;12.20;0.31;default;
+order_20261122-175833;Best Burgers;1;Self-service;2026-11-22;17:58:33;Mia;3;Iced tea 0.5L (Medium);drink;Medium;1;3.50;0.026;3.50;;0.0;12.20;0.00;12.20;0.31;default;

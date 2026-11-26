@@ -1,0 +1,6 @@
+order_number;store;register;cashier;date;time;customer;item_no;item_name;category;size;quantity;unit_price;vat_rate;item_total;ingredients;discount_rate;subtotal;discount;total;vat_amount;payment_method;rating
+order_20261112-180956;Best Burgers;1;Self-service;2026-11-12;18:09:56;Luca;1;Menu: Classic Beef Burger + Coleslaw + Cola 0.5L;menu;Small;1;13.60;0.026;13.60;;0.0;31.65;0.00;31.65;0.80;default;
+order_20261112-180956;Best Burgers;1;Self-service;2026-11-12;18:09:56;Luca;2;Menu: Fish Burger + Coleslaw + Beer 0.33L;menu;Small;1;12.75;0.026;12.75;;0.0;31.65;0.00;31.65;0.80;default;
+order_20261112-180956;Best Burgers;1;Self-service;2026-11-12;18:09:56;Luca;3;Mayonnaise dip (Small);side;Small;1;0.68;0.026;0.68;;0.0;31.65;0.00;31.65;0.80;default;
+order_20261112-180956;Best Burgers;1;Self-service;2026-11-12;18:09:56;Luca;4;Sparkling water 0.5L (Medium);drink;Medium;1;2.50;0.026;2.50;;0.0;31.65;0.00;31.65;0.80;default;
+order_20261112-180956;Best Burgers;1;Self-service;2026-11-12;18:09:56;Luca;5;Still water 0.5L (Small);drink;Small;1;2.12;0.026;2.12;;0.0;31.65;0.00;31.65;0.80;default;
