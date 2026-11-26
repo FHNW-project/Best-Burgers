@@ -3,6 +3,7 @@ import csv
 from pathlib import Path
 from . import extradef
 from cosmin_workspace.nutritional_calc import nutritional_calculator
+import pricing
 
 question = extradef.ask_yes_no
 nextstep = "Then let's go to the next step!"

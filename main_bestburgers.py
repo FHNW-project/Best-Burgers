@@ -2,6 +2,7 @@
 import filippo_workspace
 import cosmin_workspace
 import pricing
+import order_save
 
 ##### USER INTERFACE ELEMENTS #####
 LINE = "="*50
@@ -14,8 +15,8 @@ ordering_menu = {
     "4": "Go directly to Drinks"
 }
 
-order = []
 while True:
+    order = []   # every new customer starts with an empty order
     customer_name = input(f"What is your name?\n")
     print("")
     if customer_name != "admin":
@@ -32,10 +33,11 @@ while True:
                 #show the Ordering Menu
                 for number, text in ordering_menu.items():
                     print(f"{number}. {text}")
+                    print("")
 # SELECTION PROMPT #                    
                 print(pricing.subtotal_prompt(order))
                 menu_choice = input(f"Enter your selection:\n").strip()  
-                print(f"{LINE}\n")  
+                print(f"{LINE}\n") 
 
                 while menu_choice not in ordering_menu:
                     print("Invalid choice, please enter the number of your choice.")
@@ -61,14 +63,21 @@ while True:
                 ordering = filippo_workspace.extradef.ask_yes_no(f"Would you like to order something else? (Y/N)\n")
                 print(f"\n {LINE}")
 
+                # HERE WE MUST CONTINUE THE PROGRAM > WHEN NO > THIS IS YOUR ORDER TOTAL > PAY? DISCOUNT? CANCEL?
+                # AND AFTER PAYMENT > LEAVE A REVIEW FROM 1 TO 5 !!!
         else:
             print(f"See you the next time {customer_name}.")
 
-        print(LINE)
-        print(f"Order for {customer_name}")
-        print(LINE)
-
-        print(order)
+# HERE THE SAVE_INVOICE BEGINS #
+        if order:
+            order_number, file_path = order_save.save_order(customer_name, order)
+            print(LINE)
+            print(SPACE)        
+            print(f"Your order number is: {order_number}")    
+            print(SPACE)   
+            print(f"Thank you, {customer_name}, see you the next time!")    
+            print(SPACE)   
+            print(LINE)
 
     else:
         customer_name == "admin"
